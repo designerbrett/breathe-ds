@@ -1,0 +1,52 @@
+/**
+ * Breathe Design System - External Mode Global Styles
+ * Mobile-optimized for 65+ audience
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --breathe-primary: #2B79B9;
+  --breathe-primary-dark: #1F5A8E;
+  --breathe-primary-light: #E8F2FA;
+
+  --breathe-neutral-navy: #1A2B3D;
+  --breathe-neutral-slate: #2D4A5F;
+  --breathe-neutral-gray: #5A6C7D;
+  --breathe-neutral-border: #E8EDF2;
+  --breathe-neutral-bg: #F8FAFB;
+
+  --breathe-success: #27AE60;
+  --breathe-warning: #E67E22;
+  --breathe-error: #E74C3C;
+  --breathe-info: #2980B9;
+
+  /* Typography */
+  --breathe-font-heading: 'Lexend', -apple-system, sans-serif;
+  --breathe-font-body: 'Inter', -apple-system, sans-serif;
+
+  /* Spacing */
+  --breathe-space-xs: 8px;
+  --breathe-space-sm: 12px;
+  --breathe-space-md: 16px;
+  --breathe-space-lg: 24px;
+  --breathe-space-xl: 32px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--breathe-font-body);
+  color: var(--breathe-neutral-navy);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--breathe-font-heading);
+  font-weight: 600;
+}

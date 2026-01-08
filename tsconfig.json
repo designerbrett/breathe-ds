@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@breathe-ds/core": ["./packages/core/src"],
+      "@breathe-ds/external": ["./packages/external/src"],
+      "@breathe-ds/mantine": ["./packages/mantine/src"]
+    }
+  },
+  "include": ["packages/*/src"],
+  "references": [
+    { "path": "./packages/core" },
+    { "path": "./packages/external" },
+    { "path": "./packages/mantine" }
+  ]
+}

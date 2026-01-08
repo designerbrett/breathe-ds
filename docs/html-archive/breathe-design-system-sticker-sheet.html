@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathe Design System - Kivo Health</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #FAFBFC;
+            color: #1A2B3D;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 600;
+        }
+
+        .header {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 56px;
+            color: #1A2B3D;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 20px;
+            color: #5A6C7D;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: white;
+            border-radius: 24px;
+            padding: 48px;
+            margin-bottom: 32px;
+            box-shadow: 0 1px 3px rgba(26, 43, 61, 0.04);
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 32px;
+            color: #1A2B3D;
+            border-bottom: 2px solid #F0F4F7;
+            padding-bottom: 16px;
+        }
+
+        .subsection-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 32px 0 16px 0;
+            color: #2D4A5F;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Color Palette */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .color-card {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .color-swatch {
+            height: 140px;
+            display: flex;
+            align-items: flex-end;
+            padding: 16px;
+        }
+
+        .color-info {
+            background: white;
+            padding: 16px;
+        }
+
+        .color-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-size: 15px;
+        }
+
+        .color-value {
+            font-size: 13px;
+            color: #5A6C7D;
+            font-family: 'Courier New', monospace;
+        }
+
+        .color-usage {
+            font-size: 12px;
+            color: #7B8A99;
+            margin-top: 8px;
+        }
+
+        /* Typography */
+        .type-specimen {
+            margin-bottom: 32px;
+            padding: 24px;
+            background: #F8FAFB;
+            border-radius: 12px;
+            border-left: 4px solid #2B79B9;
+        }
+
+        .type-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #7B8A99;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .type-sample {
+            margin-bottom: 8px;
+        }
+
+        .type-specs {
+            font-size: 13px;
+            color: #5A6C7D;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Spacing */
+        .spacing-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .spacing-item {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .spacing-visual {
+            background: #2B79B9;
+            height: 40px;
+            border-radius: 4px;
+            min-width: 40px;
+        }
+
+        .spacing-label {
+            font-weight: 600;
+            min-width: 80px;
+        }
+
+        .spacing-value {
+            color: #5A6C7D;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+
+        /* Components */
+        .component-grid {
+            display: grid;
+            gap: 32px;
+        }
+
+        .component-demo {
+            padding: 32px;
+            background: #F8FAFB;
+            border-radius: 16px;
+            border: 1px solid #E8EDF2;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            font-size: 17px;
+            font-weight: 600;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'Inter', sans-serif;
+            min-height: 56px;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: #2B79B9;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1F5A8E;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(43, 121, 185, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #2B79B9;
+            border: 2px solid #2B79B9;
+        }
+
+        .btn-secondary:hover {
+            background: #E8F2FA;
+            border-color: #1F5A8E;
+            color: #1F5A8E;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #2B79B9;
+            border: 2px solid #2B79B9;
+        }
+
+        .btn-outline:hover {
+            background: #E8F2FA;
+            border-color: #1F5A8E;
+            color: #1F5A8E;
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: #2D4A5F;
+        }
+
+        .btn-ghost:hover {
+            background: #F0F4F7;
+        }
+
+        .btn-large {
+            padding: 20px 40px;
+            font-size: 18px;
+            min-height: 64px;
+            border-radius: 16px;
+        }
+
+        .btn-small {
+            padding: 12px 24px;
+            font-size: 15px;
+            min-height: 44px;
+            border-radius: 10px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2D4A5F;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 16px;
+            font-size: 17px;
+            border: 2px solid #E8EDF2;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.2s ease;
+            min-height: 56px;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #2B79B9;
+            box-shadow: 0 0 0 4px rgba(78, 205, 196, 0.1);
+        }
+
+        .form-input::placeholder {
+            color: #A8B5C2;
+        }
+
+        .form-helper {
+            font-size: 14px;
+            color: #7B8A99;
+            margin-top: 6px;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(26, 43, 61, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(26, 43, 61, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1A2B3D;
+        }
+
+        .card-content {
+            color: #5A6C7D;
+            font-size: 15px;
+        }
+
+        .card-elevated {
+            box-shadow: 0 8px 32px rgba(26, 43, 61, 0.12);
+        }
+
+        .card-bordered {
+            box-shadow: none;
+            border: 2px solid #E8EDF2;
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-success {
+            background: #E8F8F5;
+            color: #27AE60;
+        }
+
+        .badge-warning {
+            background: #FFF4E6;
+            color: #E67E22;
+        }
+
+        .badge-error {
+            background: #FFEBEE;
+            color: #E74C3C;
+        }
+
+        .badge-info {
+            background: #E3F2FD;
+            color: #2980B9;
+        }
+
+        /* Progress Indicators */
+        .progress-ring {
+            width: 120px;
+            height: 120px;
+            position: relative;
+        }
+
+        .progress-ring svg {
+            transform: rotate(-90deg);
+        }
+
+        .progress-ring-circle {
+            fill: transparent;
+            stroke: #E8EDF2;
+            stroke-width: 8;
+        }
+
+        .progress-ring-fill {
+            fill: transparent;
+            stroke: #2B79B9;
+            stroke-width: 8;
+            stroke-linecap: round;
+            stroke-dasharray: 283;
+            stroke-dashoffset: 70.75;
+        }
+
+        .progress-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: 700;
+            color: #1A2B3D;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 12px;
+            background: #E8EDF2;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2B79B9 0%, #3A8FCC 100%);
+            border-radius: 12px;
+            transition: width 0.3s ease;
+        }
+
+        /* Data Visualization */
+        .chart-demo {
+            display: flex;
+            align-items: flex-end;
+            gap: 8px;
+            height: 120px;
+            padding: 16px;
+        }
+
+        .bar {
+            flex: 1;
+            background: linear-gradient(180deg, #2B79B9 0%, #3A8FCC 100%);
+            border-radius: 8px 8px 0 0;
+            min-width: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .bar:hover {
+            opacity: 0.8;
+            transform: translateY(-4px);
+        }
+
+        /* Icons */
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 24px;
+        }
+
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            padding: 20px;
+            background: #F8FAFB;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .icon-circle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .icon-label {
+            font-size: 13px;
+            color: #5A6C7D;
+        }
+
+        /* Accessibility Notes */
+        .a11y-note {
+            background: #FFF9E6;
+            border-left: 4px solid #F4B942;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .a11y-note strong {
+            color: #E67E22;
+        }
+
+        /* Grid Layout */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 32px 24px;
+            }
+
+            .header h1 {
+                font-size: 40px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mode Switcher Navigation -->
+    <div style="background: white; border-bottom: 2px solid #E8EDF2; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(26, 43, 61, 0.04);">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-family: 'Lexend', sans-serif; font-size: 18px; font-weight: 600; color: #1A2B3D;">Breathe Design System</div>
+            <div style="display: flex; gap: 8px; background: #F8FAFB; padding: 4px; border-radius: 12px;">
+                <div style="padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: 600; background: #2B79B9; color: white; box-shadow: 0 2px 4px rgba(43, 121, 185, 0.2);">Overview</div>
+                <a href="breathe-design-system-external.html" style="padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: 500; text-decoration: none; color: #5A6C7D; transition: all 0.2s;">External Mode</a>
+                <a href="breathe-design-system-internal.html" style="padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: 500; text-decoration: none; color: #5A6C7D; transition: all 0.2s;">Internal Mode</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Breathe Design System</h1>
+            <p>A calm, accessible design system for Kivo Health's mobile and internal applications</p>
+            <div style="margin-top: 24px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="breathe-design-system-external.html" style="text-decoration: none; transition: all 0.3s; display: block;">
+                    <div style="background: linear-gradient(135deg, #E8F2FA 0%, #F0F6FC 100%); padding: 12px 24px; border-radius: 12px; border: 2px solid #2B79B9; cursor: pointer;">
+                        <div style="font-size: 12px; font-weight: 600; color: #1F5A8E; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">External Mode</div>
+                        <div style="font-size: 14px; color: #2D4A5F; font-weight: 500;">Patient Mobile Apps (65+) →</div>
+                    </div>
+                </a>
+                <a href="breathe-design-system-internal.html" style="text-decoration: none; transition: all 0.3s; display: block;">
+                    <div style="background: linear-gradient(135deg, #E3F2FD 0%, #EFF6FC 100%); padding: 12px 24px; border-radius: 12px; border: 2px solid #2980B9; cursor: pointer;">
+                        <div style="font-size: 12px; font-weight: 600; color: #2980B9; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Internal Mode</div>
+                        <div style="font-size: 14px; color: #2D4A5F; font-weight: 500;">Dashboards & Tools (Staff) →</div>
+                    </div>
+                </a>
+            </div>
+            <p style="margin-top: 20px; font-size: 14px; color: #7B8A99; font-style: italic;">Maintains brand consistency with kivohealth.com | Powered by Lexend + Inter</p>
+        </div>
+
+        <!-- COLOR PALETTE -->
+        <section class="section">
+            <h2 class="section-title">Color Palette</h2>
+            <p style="margin-bottom: 16px; color: #5A6C7D; font-size: 16px;">
+                Soft, calming colors designed for accessibility and emotional comfort. Primary colors evoke health, growth, and tranquility.
+            </p>
+
+            <div style="background: linear-gradient(135deg, #E8F2FA 0%, #F0F6FC 100%); border-left: 4px solid #2B79B9; padding: 20px; border-radius: 8px; margin-bottom: 32px;">
+                <strong style="color: #1A2B3D; font-size: 15px;">Brand Consistency:</strong>
+                <span style="color: #2D4A5F; font-size: 15px;"> Kivo Blue (#2B79B9) is your primary brand color from kivohealth.com, ensuring seamless brand recognition across all Kivo Health touchpoints.</span>
+            </div>
+
+            <h3 class="subsection-title">Primary Colors</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #2B79B9;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Kivo Blue</div>
+                        <div class="color-value">#2B79B9</div>
+                        <div class="color-usage">Primary actions, links, focus states, brand identity</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #1F5A8E;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Blue Dark</div>
+                        <div class="color-value">#1F5A8E</div>
+                        <div class="color-usage">Hover states, active elements</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #E8F2FA;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Blue Light</div>
+                        <div class="color-value">#E8F2FA</div>
+                        <div class="color-usage">Backgrounds, subtle highlights</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Accent Colors</h3>
+            <p style="margin-bottom: 16px; color: #7B8A99; font-size: 14px; font-style: italic;">
+                Use sparingly for celebrations, achievements, and subtle highlights. Not for buttons or primary UI elements.
+            </p>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #F4B942;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Celebration Gold</div>
+                        <div class="color-value">#F4B942</div>
+                        <div class="color-usage">Achievements, milestones, positive moments</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FFB088;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Warm Peach</div>
+                        <div class="color-value">#FFB088</div>
+                        <div class="color-usage">Subtle highlights, progress indicators</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Neutral Colors</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #1A2B3D;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Deep Navy</div>
+                        <div class="color-value">#1A2B3D</div>
+                        <div class="color-usage">Primary text, headers</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #2D4A5F;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Slate</div>
+                        <div class="color-value">#2D4A5F</div>
+                        <div class="color-usage">Secondary text</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #5A6C7D;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Gray</div>
+                        <div class="color-value">#5A6C7D</div>
+                        <div class="color-usage">Body text, descriptions</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #E8EDF2;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Light Gray</div>
+                        <div class="color-value">#E8EDF2</div>
+                        <div class="color-usage">Borders, dividers</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #F8FAFB;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Soft White</div>
+                        <div class="color-value">#F8FAFB</div>
+                        <div class="color-usage">Backgrounds, cards</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #E8EDF2;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Pure White</div>
+                        <div class="color-value">#FFFFFF</div>
+                        <div class="color-usage">Primary backgrounds</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Status Colors</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #27AE60;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Success Green</div>
+                        <div class="color-value">#27AE60</div>
+                        <div class="color-usage">Success states, completion</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #E67E22;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Warning Orange</div>
+                        <div class="color-value">#E67E22</div>
+                        <div class="color-usage">Warnings, needs attention</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #E74C3C;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Error Red</div>
+                        <div class="color-value">#E74C3C</div>
+                        <div class="color-usage">Errors, critical alerts</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #2980B9;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Info Blue</div>
+                        <div class="color-value">#2980B9</div>
+                        <div class="color-usage">Information, tips</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TYPOGRAPHY -->
+        <section class="section">
+            <h2 class="section-title">Typography</h2>
+            <p style="margin-bottom: 32px; color: #5A6C7D; font-size: 16px;">
+                Optimized for readability across all age groups. Larger base sizes for mobile (65+) audience. Lexend was designed for accessibility (originally for dyslexic readers), making it perfect for our 65+ audience while maintaining brand consistency with kivohealth.com.
+            </p>
+
+            <div class="a11y-note">
+                <strong>Accessibility Note:</strong> Base font size is 17px (mobile) / 16px (desktop) for improved readability. Line height minimum 1.5 for body text. WCAG AAA contrast ratios maintained throughout.
+            </div>
+
+            <h3 class="subsection-title">Font Families</h3>
+            <div style="margin-bottom: 32px;">
+                <div style="font-family: 'Lexend', sans-serif; font-size: 32px; margin-bottom: 8px; font-weight: 600;">Lexend - Display & Headlines</div>
+                <div style="font-family: 'Inter', sans-serif; font-size: 18px; color: #5A6C7D;">Inter - Body & UI Text</div>
+                <div style="font-size: 14px; color: #7B8A99; margin-top: 12px; font-style: italic;">Maintains brand consistency with kivohealth.com</div>
+            </div>
+
+            <h3 class="subsection-title">Type Scale</h3>
+
+            <div class="type-specimen">
+                <div class="type-label">H1 / Page Title</div>
+                <div class="type-sample" style="font-family: 'Lexend', sans-serif; font-size: 40px; font-weight: 700; line-height: 1.2;">
+                    Your Daily Progress
+                </div>
+                <div class="type-specs">font: Lexend Bold, 40px/48px</div>
+            </div>
+
+            <div class="type-specimen">
+                <div class="type-label">H2 / Section Title</div>
+                <div class="type-sample" style="font-family: 'Lexend', sans-serif; font-size: 32px; font-weight: 600; line-height: 1.3;">
+                    Today's Activities
+                </div>
+                <div class="type-specs">font: Lexend Semibold, 32px/42px</div>
+            </div>
+
+            <div class="type-specimen">
+                <div class="type-label">H3 / Card Title</div>
+                <div class="type-sample" style="font-family: 'Lexend', sans-serif; font-size: 24px; font-weight: 600; line-height: 1.4;">
+                    Morning Meditation
+                </div>
+                <div class="type-specs">font: Lexend Semibold, 24px/34px</div>
+            </div>
+
+            <div class="type-specimen">
+                <div class="type-label">Body Large</div>
+                <div class="type-sample" style="font-size: 18px; line-height: 1.6;">
+                    Take a moment to breathe deeply and center yourself. This simple practice can help reduce stress and improve focus throughout your day.
+                </div>
+                <div class="type-specs">font: Inter Regular, 18px/29px</div>
+            </div>
+
+            <div class="type-specimen">
+                <div class="type-label">Body / Default</div>
+                <div class="type-sample" style="font-size: 17px; line-height: 1.6;">
+                    Regular body text optimized for mobile reading. Designed with generous spacing and clear hierarchy for users 65+ years old.
+                </div>
+                <div class="type-specs">font: Inter Regular, 17px/27px</div>
+            </div>
+
+            <div class="type-specimen">
+                <div class="type-label">Body Small</div>
+                <div class="type-sample" style="font-size: 15px; line-height: 1.6; color: #5A6C7D;">
+                    Helper text, captions, and secondary information that supports primary content without competing for attention.
+                </div>
+                <div class="type-specs">font: Inter Regular, 15px/24px</div>
+            </div>
+
+            <div class="type-specimen">
+                <div class="type-label">Button / Interactive</div>
+                <div class="type-sample" style="font-size: 17px; font-weight: 600; line-height: 1.4;">
+                    Complete Activity
+                </div>
+                <div class="type-specs">font: Inter Semibold, 17px/24px</div>
+            </div>
+
+            <div class="type-specimen">
+                <div class="type-label">Label / Small Caps</div>
+                <div class="type-sample" style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #7B8A99;">
+                    Status: Active
+                </div>
+                <div class="type-specs">font: Inter Semibold, 13px/18px, uppercase, 1px tracking</div>
+            </div>
+        </section>
+
+        <!-- SPACING -->
+        <section class="section">
+            <h2 class="section-title">Spacing System</h2>
+            <p style="margin-bottom: 32px; color: #5A6C7D; font-size: 16px;">
+                8px base grid for consistent rhythm. Larger touch targets (min 44px) for mobile accessibility.
+            </p>
+
+            <div class="spacing-grid">
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 4px;"></div>
+                    <div class="spacing-label">XXS</div>
+                    <div class="spacing-value">4px - Tight spacing, icon gaps</div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 8px;"></div>
+                    <div class="spacing-label">XS</div>
+                    <div class="spacing-value">8px - Small gaps, element spacing</div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 12px;"></div>
+                    <div class="spacing-label">SM</div>
+                    <div class="spacing-value">12px - Form element spacing</div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 16px;"></div>
+                    <div class="spacing-label">MD</div>
+                    <div class="spacing-value">16px - Standard spacing, padding</div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 24px;"></div>
+                    <div class="spacing-label">LG</div>
+                    <div class="spacing-value">24px - Card padding, section gaps</div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 32px;"></div>
+                    <div class="spacing-label">XL</div>
+                    <div class="spacing-value">32px - Large sections, containers</div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 48px;"></div>
+                    <div class="spacing-label">2XL</div>
+                    <div class="spacing-value">48px - Major sections, page padding</div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 64px;"></div>
+                    <div class="spacing-label">3XL</div>
+                    <div class="spacing-value">64px - Hero sections, major breaks</div>
+                </div>
+            </div>
+
+            <div class="a11y-note" style="margin-top: 32px;">
+                <strong>Touch Target Guidelines:</strong> Minimum 44x44px for all interactive elements (mobile). 48x48px recommended for primary actions. Generous spacing between adjacent interactive elements.
+            </div>
+        </section>
+
+        <!-- BUTTONS -->
+        <section class="section">
+            <h2 class="section-title">Buttons</h2>
+
+            <h3 class="subsection-title">Button Variants</h3>
+            <div class="component-demo">
+                <div class="button-group">
+                    <button class="btn btn-primary">Primary Action</button>
+                    <button class="btn btn-secondary">Secondary Action</button>
+                    <button class="btn btn-outline">Outline Button</button>
+                    <button class="btn btn-ghost">Ghost Button</button>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Button Sizes</h3>
+            <div class="component-demo">
+                <div class="button-group">
+                    <button class="btn btn-primary btn-large">Large Button</button>
+                    <button class="btn btn-primary">Default Button</button>
+                    <button class="btn btn-primary btn-small">Small Button</button>
+                </div>
+            </div>
+
+            <div class="a11y-note">
+                <strong>Mobile Optimization:</strong> Default button height 56px, large buttons 64px for easy tapping by all age groups. High contrast ratios (4.5:1 minimum) for text on all backgrounds.
+            </div>
+        </section>
+
+        <!-- FORM ELEMENTS -->
+        <section class="section">
+            <h2 class="section-title">Form Elements</h2>
+
+            <div class="component-demo">
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-input" placeholder="you@example.com">
+                    <div class="form-helper">We'll never share your email with anyone else.</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">How are you feeling today?</label>
+                    <input type="text" class="form-input" placeholder="Share your thoughts...">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Notes</label>
+                    <textarea class="form-input" rows="4" placeholder="Add any additional notes here..."></textarea>
+                </div>
+            </div>
+
+            <div class="a11y-note">
+                <strong>Form Accessibility:</strong> Clear labels above inputs. Large text (17px). High touch targets (56px min height). Focus states with 4px outline for visibility. Helper text for guidance.
+            </div>
+        </section>
+
+        <!-- CARDS -->
+        <section class="section">
+            <h2 class="section-title">Cards</h2>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title">Standard Card</div>
+                    <div class="card-content">
+                        Soft shadows and rounded corners create an approachable, friendly feeling. Perfect for content grouping.
+                    </div>
+                </div>
+
+                <div class="card card-elevated">
+                    <div class="card-title">Elevated Card</div>
+                    <div class="card-content">
+                        Increased shadow depth for emphasis. Use for interactive or important content that needs to stand out.
+                    </div>
+                </div>
+
+                <div class="card card-bordered">
+                    <div class="card-title">Bordered Card</div>
+                    <div class="card-content">
+                        Subtle border variant for lighter visual weight. Good for dense layouts like dashboards and tables.
+                    </div>
+                </div>
+
+                <div class="card" style="background: linear-gradient(135deg, #E8F2FA 0%, #F0FFFE 100%);">
+                    <div class="card-title">Accent Card</div>
+                    <div class="card-content">
+                        Gentle gradient backgrounds for highlighting special content or achievements.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BADGES & STATUS -->
+        <section class="section">
+            <h2 class="section-title">Badges & Status Indicators</h2>
+
+            <div class="component-demo">
+                <div class="button-group">
+                    <span class="badge badge-success">Completed</span>
+                    <span class="badge badge-warning">Needs Attention</span>
+                    <span class="badge badge-error">Critical</span>
+                    <span class="badge badge-info">In Progress</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRESS INDICATORS -->
+        <section class="section">
+            <h2 class="section-title">Progress Indicators</h2>
+
+            <h3 class="subsection-title">Circular Progress</h3>
+            <div class="component-demo">
+                <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+                    <div class="progress-ring">
+                        <svg width="120" height="120">
+                            <circle class="progress-ring-circle" cx="60" cy="60" r="45"></circle>
+                            <circle class="progress-ring-fill" cx="60" cy="60" r="45"></circle>
+                        </svg>
+                        <div class="progress-label">75%</div>
+                    </div>
+                    <div style="flex: 1; min-width: 200px;">
+                        <p style="color: #5A6C7D; margin-bottom: 16px;">Use circular progress for goals, activities, and health metrics. Clean, minimal design with clear percentage labels.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Linear Progress</h3>
+            <div class="component-demo">
+                <div style="margin-bottom: 16px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="font-weight: 600; color: #2D4A5F;">Daily Goal Progress</span>
+                        <span style="color: #5A6C7D;">7 of 10 activities</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DATA VISUALIZATION -->
+        <section class="section">
+            <h2 class="section-title">Data Visualization</h2>
+            <p style="margin-bottom: 32px; color: #5A6C7D; font-size: 16px;">
+                Clean, minimal charts with soft colors. Avoid overwhelming users with too much data. Focus on key insights.
+            </p>
+
+            <h3 class="subsection-title">Bar Chart Style</h3>
+            <div class="component-demo">
+                <div class="chart-demo">
+                    <div class="bar" style="height: 40%;"></div>
+                    <div class="bar" style="height: 65%;"></div>
+                    <div class="bar" style="height: 85%;"></div>
+                    <div class="bar" style="height: 55%;"></div>
+                    <div class="bar" style="height: 90%;"></div>
+                    <div class="bar" style="height: 70%;"></div>
+                    <div class="bar" style="height: 60%;"></div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Chart Color Palette</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: linear-gradient(180deg, #2B79B9 0%, #3A8FCC 100%);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Data</div>
+                        <div class="color-value">Blue Gradient</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: linear-gradient(180deg, #FFB088 0%, #FF9A6C 100%);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Secondary Data</div>
+                        <div class="color-value">Peach Gradient</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: linear-gradient(180deg, #A78BFA 0%, #9F7AEA 100%);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Tertiary Data</div>
+                        <div class="color-value">Purple Gradient</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ICONOGRAPHY -->
+        <section class="section">
+            <h2 class="section-title">Iconography</h2>
+            <p style="margin-bottom: 32px; color: #5A6C7D; font-size: 16px;">
+                Soft, rounded icons that feel approachable. Use circular containers for visual consistency. Icons should be clear and recognizable at all sizes.
+            </p>
+
+            <div class="icon-grid">
+                <div class="icon-item">
+                    <div class="icon-circle" style="background: #E8F2FA; color: #2B79B9;">✓</div>
+                    <div class="icon-label">Success</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-circle" style="background: #FFF4E6; color: #E67E22;">!</div>
+                    <div class="icon-label">Warning</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-circle" style="background: #E3F2FD; color: #2980B9;">i</div>
+                    <div class="icon-label">Info</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-circle" style="background: #E8F2FA; color: #2B79B9;">♥</div>
+                    <div class="icon-label">Health</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-circle" style="background: linear-gradient(135deg, #2B79B9 0%, #3A8FCC 100%); color: white;">→</div>
+                    <div class="icon-label">Navigation</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-circle" style="background: #FFF4E6; color: #F4B942;">★</div>
+                    <div class="icon-label">Achievement</div>
+                </div>
+            </div>
+
+            <div class="a11y-note" style="margin-top: 24px;">
+                <strong>Icon Guidelines:</strong> Minimum size 24x24px for standalone icons, 44x44px for interactive icon buttons. Always include accessible labels. Use high contrast between icon and background.
+            </div>
+        </section>
+
+        <!-- DESIGN PRINCIPLES -->
+        <section class="section">
+            <h2 class="section-title">Design Principles</h2>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title">🌬️ Light & Airy</div>
+                    <div class="card-content">
+                        Generous white space, soft colors, and gentle shadows create breathing room. Nothing feels cramped or overwhelming.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">🤝 Accessible First</div>
+                    <div class="card-content">
+                        Large text (17px base), high contrast (WCAG AAA), generous touch targets (56px min), clear visual hierarchy.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">😌 Calming Yet Action-Oriented</div>
+                    <div class="card-content">
+                        Soft teal creates calm while warm coral accents drive action. Balance between soothing and motivating.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">💚 Human & Friendly</div>
+                    <div class="card-content">
+                        Rounded corners, friendly language, approachable illustrations. Technology that feels warm and inviting.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">📱 Mobile-First</div>
+                    <div class="card-content">
+                        Designed for thumbs and fingers, not mice. Large targets, simple navigation, optimized for one-handed use.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">📊 Clarity Over Complexity</div>
+                    <div class="card-content">
+                        Show what matters, hide what doesn't. Progressive disclosure. Simple, scannable layouts with clear hierarchy.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DUAL-MODE APPROACH -->
+        <section class="section">
+            <h2 class="section-title">Application Modes</h2>
+            <p style="margin-bottom: 24px; color: #5A6C7D; font-size: 16px;">
+                The Breathe design system operates in two modes, sharing core brand elements (colors, typography, components) while optimizing for different audiences and use cases.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px;">
+                <div class="card" style="background: linear-gradient(135deg, #E8F2FA 0%, #F0FFFE 100%); border: 2px solid #2B79B9;">
+                    <div style="display: inline-block; padding: 6px 14px; background: #2B79B9; color: white; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px;">External Mode</div>
+                    <div class="card-title">Patient-Facing Mobile Apps</div>
+                    <div class="card-content">
+                        <strong>Audience:</strong> 65+ years old<br>
+                        <strong>Platform:</strong> Mobile (iOS/Android)<br>
+                        <strong>Priority:</strong> Accessibility, clarity, encouragement<br>
+                        <strong>Density:</strong> Low (spacious, one task per screen)<br>
+                        <strong>Tone:</strong> Warm, calming, supportive
+                    </div>
+                </div>
+
+                <div class="card" style="background: linear-gradient(135deg, #E3F2FD 0%, #EFF6FC 100%); border: 2px solid #2980B9;">
+                    <div style="display: inline-block; padding: 6px 14px; background: #2980B9; color: white; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px;">Internal Mode</div>
+                    <div class="card-title">Dashboards & Admin Tools</div>
+                    <div class="card-content">
+                        <strong>Audience:</strong> 25-45 tech-savvy staff<br>
+                        <strong>Platform:</strong> Desktop web (browser)<br>
+                        <strong>Priority:</strong> Efficiency, data density, productivity<br>
+                        <strong>Density:</strong> High (compact, multi-column layouts)<br>
+                        <strong>Tone:</strong> Professional, clear, efficient
+                    </div>
+                </div>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 0;">
+                    <thead>
+                        <tr>
+                            <th style="padding: 16px; text-align: left; background: #F8FAFB; font-weight: 600; border-bottom: 2px solid #E8EDF2;">Element</th>
+                            <th style="padding: 16px; text-align: left; background: #E8F2FA; font-weight: 600; border-bottom: 2px solid #2B79B9; color: #2D4A5F;">External (Mobile)</th>
+                            <th style="padding: 16px; text-align: left; background: #E3F2FD; font-weight: 600; border-bottom: 2px solid #2980B9; color: #2D4A5F;">Internal (Desktop)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #E8EDF2;">
+                            <td style="padding: 16px; font-weight: 600;">Base Font Size</td>
+                            <td style="padding: 16px; background: #FAFFFE;">17px</td>
+                            <td style="padding: 16px; background: #FAFCFE;">14px (Polaris)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E8EDF2;">
+                            <td style="padding: 16px; font-weight: 600;">Line Height</td>
+                            <td style="padding: 16px; background: #FAFFFE;">1.6-1.8</td>
+                            <td style="padding: 16px; background: #FAFCFE;">1.5</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E8EDF2;">
+                            <td style="padding: 16px; font-weight: 600;">Interactive Targets</td>
+                            <td style="padding: 16px; background: #FAFFFE;">56px min (touch)</td>
+                            <td style="padding: 16px; background: #FAFCFE;">36px min (mouse)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E8EDF2;">
+                            <td style="padding: 16px; font-weight: 600;">Card Padding</td>
+                            <td style="padding: 16px; background: #FAFFFE;">24-32px</td>
+                            <td style="padding: 16px; background: #FAFCFE;">16-20px</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E8EDF2;">
+                            <td style="padding: 16px; font-weight: 600;">Border Radius</td>
+                            <td style="padding: 16px; background: #FAFFFE;">12-16px (friendly)</td>
+                            <td style="padding: 16px; background: #FAFCFE;">6-8px (compact)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E8EDF2;">
+                            <td style="padding: 16px; font-weight: 600;">Navigation</td>
+                            <td style="padding: 16px; background: #FAFFFE;">Bottom tab bar</td>
+                            <td style="padding: 16px; background: #FAFCFE;">Sidebar / top nav</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E8EDF2;">
+                            <td style="padding: 16px; font-weight: 600;">Layout</td>
+                            <td style="padding: 16px; background: #FAFFFE;">Single column</td>
+                            <td style="padding: 16px; background: #FAFCFE;">Multi-column</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; font-weight: 600;">Shared Elements</td>
+                            <td colspan="2" style="padding: 16px; background: #F8FAFB; text-align: center; color: #5A6C7D;">Colors, Typography (Lexend + Inter), Component DNA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- EXTERNAL MODE: MOBILE CONSIDERATIONS -->
+        <section class="section">
+            <h2 class="section-title">
+                <span style="display: inline-block; padding: 6px 14px; background: #2B79B9; color: white; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-right: 12px; vertical-align: middle;">External</span>
+                Mobile Design (65+ Audience)
+            </h2>
+
+            <div class="a11y-note">
+                <strong>Age-Friendly Design:</strong> These guidelines ensure the mobile experience works beautifully for users 65+
+            </div>
+
+            <div style="margin-top: 24px;">
+                <div class="card" style="margin-bottom: 16px;">
+                    <div class="card-title">Typography</div>
+                    <div class="card-content">
+                        • Minimum 17px body text, 18px for important content<br>
+                        • Line height 1.6 minimum for easy reading<br>
+                        • High contrast text (4.5:1 minimum, AAA preferred)<br>
+                        • Avoid all-caps for long text (harder to read)
+                    </div>
+                </div>
+
+                <div class="card" style="margin-bottom: 16px;">
+                    <div class="card-title">Touch Targets</div>
+                    <div class="card-content">
+                        • Minimum 44x44px, recommended 56x56px<br>
+                        • 8px minimum spacing between adjacent interactive elements<br>
+                        • Large, obvious tap areas for primary actions<br>
+                        • Avoid gesture-only interactions (provide buttons too)
+                    </div>
+                </div>
+
+                <div class="card" style="margin-bottom: 16px;">
+                    <div class="card-title">Navigation</div>
+                    <div class="card-content">
+                        • Simple, clear navigation with 3-5 main sections<br>
+                        • Bottom navigation bar for one-handed use<br>
+                        • Large, labeled icons (not icon-only)<br>
+                        • Clear "back" affordances on every screen
+                    </div>
+                </div>
+
+                <div class="card" style="margin-bottom: 16px;">
+                    <div class="card-title">Content</div>
+                    <div class="card-content">
+                        • One primary action per screen when possible<br>
+                        • Short paragraphs (2-3 sentences max)<br>
+                        • Bullet points over long text blocks<br>
+                        • Clear headings and scannable layouts
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Feedback & States</div>
+                    <div class="card-content">
+                        • Immediate visual feedback on all interactions<br>
+                        • Clear loading states (avoid long waits)<br>
+                        • Success confirmations for important actions<br>
+                        • Forgiving UI (easy undo, confirmation dialogs)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERNAL MODE: DASHBOARD/INTERNAL CONSIDERATIONS -->
+        <section class="section">
+            <h2 class="section-title">
+                <span style="display: inline-block; padding: 6px 14px; background: #2980B9; color: white; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-right: 12px; vertical-align: middle;">Internal</span>
+                Dashboard & Internal Tools
+            </h2>
+            <p style="margin-bottom: 32px; color: #5A6C7D; font-size: 16px;">
+                More data-dense than mobile, but maintains Breathe's calm, accessible aesthetic.
+            </p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title">Tables</div>
+                    <div class="card-content">
+                        • Zebra striping for row scanning<br>
+                        • Sticky headers on scroll<br>
+                        • Clear sort indicators<br>
+                        • Adequate cell padding (12px min)<br>
+                        • Hover states for rows
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Forms</div>
+                    <div class="card-content">
+                        • Group related fields<br>
+                        • Inline validation<br>
+                        • Clear error messages<br>
+                        • Progressive disclosure for complex forms<br>
+                        • Save indicators
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Data Visualization</div>
+                    <div class="card-content">
+                        • Tooltips on hover for details<br>
+                        • Legend positioning<br>
+                        • Accessible color palettes<br>
+                        • Export options<br>
+                        • Responsive sizing
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Layout</div>
+                    <div class="card-content">
+                        • Consistent sidebar navigation<br>
+                        • Breadcrumbs for deep navigation<br>
+                        • Filter panels (collapsible)<br>
+                        • Action buttons (top-right convention)<br>
+                        • Responsive grid (12-column)
+                    </div>
+                </div>
+            </div>
+
+            <div class="a11y-note" style="margin-top: 32px;">
+                <strong>Mantine Integration:</strong> Internal tools currently use the Mantine component library. Theme Mantine with Breathe design tokens (colors, typography, spacing, border radius) to maintain design system consistency while leveraging Mantine's robust components for tables, forms, and data management.
+            </div>
+
+            <div style="background: #F8FAFB; border-radius: 12px; padding: 24px; margin-top: 16px; border-left: 4px solid #2980B9;">
+                <h4 style="font-family: 'Lexend', sans-serif; font-size: 16px; font-weight: 600; margin-bottom: 12px; color: #1A2B3D;">Mantine Theme Override</h4>
+                <pre style="background: #1A2B3D; color: #E8EDF2; padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 13px; line-height: 1.6; margin: 0;"><code>const breatheTheme = {
+  primaryColor: 'blue',
+  fontFamily: 'Inter, sans-serif',
+  headings: { fontFamily: 'Lexend, sans-serif' },
+  spacing: { xs: 8, sm: 12, md: 16, lg: 24, xl: 32 },
+  radius: { sm: 8, md: 12, lg: 16 },
+  colors: {
+    blue: ['#E8F2FA', '#C1DCEF', '#9AC6E5', '#73B0DA',
+           '#4C9AD0', '#2B79B9', '#1F5A8E', '#153F63']
+  }
+};</code></pre>
+            </div>
+        </section>
+
+        <!-- COMPONENT USAGE NOTES -->
+        <section class="section">
+            <h2 class="section-title">Component Usage Guidelines</h2>
+
+            <div class="card" style="margin-bottom: 16px;">
+                <div class="card-title">Button Hierarchy (Inspired by Function & Hinge Health)</div>
+                <div class="card-content">
+                    <strong>Primary (Filled Blue):</strong> Main action, forward progress, completion, submission. The most important action on the page.<br>
+                    <strong>Secondary (Outlined Blue):</strong> Alternative actions, less critical paths, secondary workflows. Uses same brand color but with less visual weight.<br>
+                    <strong>Tertiary (Text Link Blue):</strong> Low-priority actions, back navigation, inline links, dismissals. Text-only, no background or border.<br>
+                    <strong>Destructive (Red):</strong> Only for actual destructive actions like delete, remove, cancel subscription. Not for general secondary actions.
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom: 16px;">
+                <div class="card-title">Card elevation hierarchy</div>
+                <div class="card-content">
+                    <strong>Standard:</strong> Default for most content grouping<br>
+                    <strong>Elevated:</strong> Interactive cards, clickable content, important callouts<br>
+                    <strong>Bordered:</strong> Dense layouts, nested cards, subtle grouping
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Color Application (Minimal Approach)</div>
+                <div class="card-content">
+                    <strong>Kivo Blue (#2B79B9):</strong> Your primary brand color. Use for all primary actions, links, focus states, interactive elements, and brand moments. This creates consistency and trust.<br><br>
+                    <strong>Neutrals (Grays):</strong> Use for text hierarchy, backgrounds, borders, and non-interactive UI. Most of your interface should be neutral.<br><br>
+                    <strong>Status Colors:</strong> Green (success), Orange (warning), Red (error/destructive), Blue (info). Only use for actual status communication.<br><br>
+                    <strong>Accent Colors (Use Sparingly):</strong><br>
+                    • <strong>Gold (#F4B942):</strong> Achievements, milestones, celebrations only<br>
+                    • <strong>Peach (#FFB088):</strong> Subtle highlights in data visualizations<br><br>
+                    <em style="color: #7B8A99;">Following Function Health and Hinge Health's minimal approach: one strong brand color + neutrals + functional status colors.</em>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <div style="text-align: center; padding: 40px 20px; color: #7B8A99;">
+            <p style="font-size: 14px;">Breathe Design System v1.0 • Kivo Health • 2026</p>
+            <p style="font-size: 13px; margin-top: 8px;">Designed for accessibility, optimized for care</p>
+        </div>
+    </div>
+</body>
+</html>

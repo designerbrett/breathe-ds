@@ -1,0 +1,1 @@
+export { breatheMantineTheme } from './theme';

@@ -1,0 +1,129 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2D4A5F;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.required {
+  color: #E74C3C;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 16px;
+  font-size: 17px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1A2B3D;
+  background: #FFFFFF;
+  border: 2px solid #E8EDF2;
+  border-radius: 12px;
+  min-height: 56px;
+  transition: all 0.2s ease;
+  line-height: 1.5;
+}
+
+.input::placeholder {
+  color: #A8B5C2;
+}
+
+.input:hover:not(:disabled) {
+  border-color: #2B79B9;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2B79B9;
+  box-shadow: 0 0 0 4px rgba(43, 121, 185, 0.1);
+}
+
+.input:disabled {
+  background: #F8FAFB;
+  color: #A8B5C2;
+  cursor: not-allowed;
+  border-color: #E8EDF2;
+}
+
+/* Error state */
+.input.error {
+  border-color: #E74C3C;
+}
+
+.input.error:focus {
+  border-color: #E74C3C;
+  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.1);
+}
+
+/* Success state */
+.input.success {
+  border-color: #27AE60;
+}
+
+.input.success:focus {
+  border-color: #27AE60;
+  box-shadow: 0 0 0 4px rgba(39, 174, 96, 0.1);
+}
+
+/* Size variants */
+.size-large {
+  padding: 20px;
+  font-size: 18px;
+  min-height: 64px;
+  border-radius: 16px;
+}
+
+/* Helper text */
+.helperText {
+  font-size: 14px;
+  color: #7B8A99;
+  line-height: 1.5;
+}
+
+/* Error text */
+.errorText {
+  font-size: 14px;
+  color: #E74C3C;
+  font-weight: 500;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.errorText::before {
+  content: '⚠';
+  flex-shrink: 0;
+}
+
+/* Success text */
+.successText {
+  font-size: 14px;
+  color: #27AE60;
+  font-weight: 500;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.successText::before {
+  content: '✓';
+  flex-shrink: 0;
+}
+
+/* Accessibility: Ensure focus is visible */
+.input:focus-visible {
+  outline: 4px solid rgba(43, 121, 185, 0.3);
+  outline-offset: 2px;
+}

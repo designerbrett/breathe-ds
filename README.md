@@ -158,6 +158,7 @@ Mantine theme overrides for internal desktop tools:
 import { MantineProvider } from '@mantine/core';
 import { breatheMantineTheme } from '@breathe-ds/mantine';
 import '@mantine/core/styles.css';
+import '@breathe-ds/mantine/button-overrides.css'; // Import button styles
 
 function App() {
   return (
@@ -246,24 +247,31 @@ Compact 36px buttons for desktop productivity:
 
 ```jsx
 import { Button } from '@mantine/core';
+import { MantineProvider } from '@mantine/core';
+import { breatheMantineTheme } from '@breathe-ds/mantine';
+import '@mantine/core/styles.css';
+import '@breathe-ds/mantine/button-overrides.css';
 
-// Primary (default) - Blue gradient with darker hover
-<Button>Save Changes</Button>
+// Wrap your app with MantineProvider
+<MantineProvider theme={breatheMantineTheme}>
+  {/* Primary (default) - Blue gradient with darker hover */}
+  <Button>Save Changes</Button>
 
-// Secondary (outline) - Light gray with hover
-<Button variant="outline">Cancel</Button>
+  {/* Secondary (outline) - Light gray with hover */}
+  <Button variant="outline">Cancel</Button>
 
-// Critical - Red button (requires data-button-color attribute)
-<Button color="red" data-button-color="red">Delete</Button>
+  {/* Critical - Red button (requires data-button-color attribute) */}
+  <Button color="red" data-button-color="red">Delete</Button>
 
-// Tertiary (subtle) - Transparent with blue text
-<Button variant="subtle">Learn More</Button>
+  {/* Tertiary (subtle) - Transparent with blue text */}
+  <Button variant="subtle">Learn More</Button>
 
-// Light - Transparent with gray text
-<Button variant="light">Skip</Button>
+  {/* Light - Transparent with gray text */}
+  <Button variant="light">Skip</Button>
 
-// Disabled states
-<Button disabled>Disabled</Button>
+  {/* Disabled states */}
+  <Button disabled>Disabled</Button>
+</MantineProvider>
 ```
 
 **Note:** For critical buttons in Mantine, you must include both `color="red"` and `data-button-color="red"` to ensure proper hover styling.

@@ -72,19 +72,6 @@ export const breatheMantineTheme: MantineThemeOverride = {
                 ...baseStyles,
                 background: 'linear-gradient(180deg, rgba(48, 48, 48, 0.00) 63.53%, rgba(255, 255, 255, 0.15) 100%), #E74C3C',
                 boxShadow: '0 -1px 0 1px rgba(183, 60, 47, 0.80) inset, 0 0 0 1px rgba(204, 66, 52, 0.80) inset, 0 0.5px 0 1.5px rgba(247, 128, 134, 0.64) inset',
-                '&:hover:not(:disabled):not([data-disabled])': {
-                  background: 'linear-gradient(180deg, rgba(48, 48, 48, 0.00) 63.53%, rgba(255, 255, 255, 0.15) 100%), #C7392D',
-                },
-                '&:active:not(:disabled)': {
-                  background: 'linear-gradient(180deg, rgba(48, 48, 48, 0.00) 63.53%, rgba(255, 255, 255, 0.15) 100%), #C33F32',
-                  boxShadow: '0 -1px 0 1px rgba(163, 50, 39, 0.80) inset, 0 0 0 1px rgba(184, 56, 44, 0.80) inset, 0 0.5px 0 1.5px rgba(227, 108, 114, 0.64) inset',
-                },
-                '&:disabled, &[data-disabled]': {
-                  opacity: 0.5,
-                  cursor: 'not-allowed',
-                  background: 'linear-gradient(180deg, rgba(48, 48, 48, 0.00) 63.53%, rgba(255, 255, 255, 0.15) 100%), #E74C3C',
-                  boxShadow: '0 -1px 0 1px rgba(183, 60, 47, 0.80) inset, 0 0 0 1px rgba(204, 66, 52, 0.80) inset, 0 0.5px 0 1.5px rgba(247, 128, 134, 0.64) inset',
-                },
               },
             };
           }
@@ -94,19 +81,6 @@ export const breatheMantineTheme: MantineThemeOverride = {
               ...baseStyles,
               background: 'linear-gradient(180deg, rgba(48, 48, 48, 0.00) 63.53%, rgba(255, 255, 255, 0.15) 100%), #2B79B9',
               boxShadow: '0 -1px 0 1px #1D517C inset, 0 0 0 1px #1D517C inset, 0 0.5px 0 1.5px rgba(255, 255, 255, 0.25) inset',
-              '&:hover:not(:disabled):not([data-disabled])': {
-                background: 'linear-gradient(180deg, rgba(48, 48, 48, 0.00) 63.53%, rgba(255, 255, 255, 0.15) 100%), #236199',
-              },
-              '&:active:not(:disabled)': {
-                background: 'linear-gradient(180deg, rgba(48, 48, 48, 0.00) 63.53%, rgba(255, 255, 255, 0.15) 100%), #1F6BA4',
-                boxShadow: '0 -1px 0 1px #164466 inset, 0 0 0 1px #164466 inset, 0 0.5px 0 1.5px rgba(255, 255, 255, 0.15) inset',
-              },
-              '&:disabled, &[data-disabled]': {
-                opacity: 0.5,
-                cursor: 'not-allowed',
-                background: 'linear-gradient(180deg, rgba(48, 48, 48, 0.00) 63.53%, rgba(255, 255, 255, 0.15) 100%), #2B79B9',
-                boxShadow: '0 -1px 0 1px #1D517C inset, 0 0 0 1px #1D517C inset, 0 0.5px 0 1.5px rgba(255, 255, 255, 0.25) inset',
-              },
             },
           };
         }
@@ -118,18 +92,6 @@ export const breatheMantineTheme: MantineThemeOverride = {
               ...baseStyles,
               background: 'transparent',
               color: '#2B79B9',
-              '&:hover:not(:disabled):not([data-disabled])': {
-                background: '#F0F0F0',
-              },
-              '&:active:not(:disabled)': {
-                background: '#E0E0E0',
-              },
-              '&:disabled, &[data-disabled]': {
-                opacity: 0.5,
-                cursor: 'not-allowed',
-                background: 'transparent',
-                color: '#2B79B9',
-              },
             },
           };
         }
@@ -141,18 +103,6 @@ export const breatheMantineTheme: MantineThemeOverride = {
               ...baseStyles,
               background: 'transparent',
               color: '#5C5F62',
-              '&:hover:not(:disabled):not([data-disabled])': {
-                background: '#F0F0F0',
-              },
-              '&:active:not(:disabled)': {
-                background: '#E0E0E0',
-              },
-              '&:disabled, &[data-disabled]': {
-                opacity: 0.5,
-                cursor: 'not-allowed',
-                background: 'transparent',
-                color: '#5C5F62',
-              },
             },
           };
         }
@@ -165,19 +115,6 @@ export const breatheMantineTheme: MantineThemeOverride = {
               background: 'rgba(250, 250, 250, 1)',
               boxShadow: '0 -1px 0 0 #B5B5B5 inset, 0 0 0 1px rgba(0, 0, 0, 0.10) inset, 0 0.5px 0 1.5px rgba(255, 255, 255, 0.8) inset',
               color: '#202223',
-              '&:hover:not(:disabled):not([data-disabled])': {
-                background: '#F0F0F0',
-              },
-              '&:active:not(:disabled)': {
-                background: '#E8E8E8',
-                boxShadow: '0 -1px 0 0 #A0A0A0 inset, 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0.5px 0 1.5px rgba(245, 245, 245, 0.8) inset',
-              },
-              '&:disabled, &[data-disabled]': {
-                opacity: 0.5,
-                cursor: 'not-allowed',
-                background: 'rgba(250, 250, 250, 1)',
-                boxShadow: '0 -1px 0 0 #B5B5B5 inset, 0 0 0 1px rgba(0, 0, 0, 0.10) inset, 0 0.5px 0 1.5px rgba(255, 255, 255, 0.8) inset',
-              },
             },
           };
         }

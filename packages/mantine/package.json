@@ -10,7 +10,8 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
-    }
+    },
+    "./button-overrides.css": "./src/button-overrides.css"
   },
   "scripts": {
     "build": "vite build && tsc --emitDeclarationOnly",

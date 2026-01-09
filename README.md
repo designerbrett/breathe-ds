@@ -160,6 +160,7 @@ import { breatheMantineTheme } from '@breathe-ds/mantine';
 import '@mantine/core/styles.css';
 import '@breathe-ds/mantine/button-overrides.css'; // Import button styles
 import '@breathe-ds/mantine/card-overrides.css'; // Import card styles
+import '@breathe-ds/mantine/menu-overrides.css'; // Import menu styles
 
 function App() {
   return (
@@ -176,6 +177,9 @@ function App() {
 
 **Default Spacing (automatically applied via CSS):**
 - `Card`: 24px padding, 8px radius (automatically applied)
+- `Menu.Item`: 10px vertical, 12px horizontal padding, 36px min-height
+- `Menu.Dropdown`: 8px padding, 8px radius
+- `Menu.Label`: 8px vertical, 12px horizontal padding
 - `Stack` / `Group`: 16px gap between children (default)
 - `Grid`: 16px gutter between columns (default)
 - `Modal`: 24px padding (default), medium radius
@@ -184,7 +188,7 @@ function App() {
 
 **Usage Example:**
 ```tsx
-import { Card, Stack, Text } from '@mantine/core';
+import { Card, Stack, Text, Menu, Button } from '@mantine/core';
 
 // Cards automatically have 24px padding from CSS overrides
 <Card shadow="sm">
@@ -194,10 +198,19 @@ import { Card, Stack, Text } from '@mantine/core';
   </Stack>
 </Card>
 
-// Override padding if needed
-<Card padding="xl" shadow="sm">
-  <Text>Larger padding</Text>
-</Card>
+// Menu items automatically have comfortable padding
+<Menu>
+  <Menu.Target>
+    <Button>Actions</Button>
+  </Menu.Target>
+  <Menu.Dropdown>
+    <Menu.Label>File Actions</Menu.Label>
+    <Menu.Item>Edit</Menu.Item>
+    <Menu.Item>Copy</Menu.Item>
+    <Menu.Divider />
+    <Menu.Item color="red">Delete</Menu.Item>
+  </Menu.Dropdown>
+</Menu>
 ```
 
 ## Design Tokens
@@ -279,6 +292,7 @@ import { breatheMantineTheme } from '@breathe-ds/mantine';
 import '@mantine/core/styles.css';
 import '@breathe-ds/mantine/button-overrides.css';
 import '@breathe-ds/mantine/card-overrides.css';
+import '@breathe-ds/mantine/menu-overrides.css';
 
 // Wrap your app with MantineProvider
 <MantineProvider theme={breatheMantineTheme}>

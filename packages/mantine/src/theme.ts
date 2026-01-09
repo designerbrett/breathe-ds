@@ -189,5 +189,25 @@ export const breatheMantineTheme: MantineThemeOverride = {
         radius: 'md',
       },
     },
+    Menu: {
+      defaultProps: {
+        radius: 'md',
+      },
+    },
+    'Menu.Dropdown': {
+      defaultProps: {
+        padding: 'xs', // 8px for dropdown container
+      },
+    },
+    'Menu.Item': {
+      defaultProps: {
+        padding: 'sm', // 12px for menu items
+      },
+    },
+    'Menu.Label': {
+      defaultProps: {
+        padding: 'xs', // 8px for labels
+      },
+    },
   },
 };

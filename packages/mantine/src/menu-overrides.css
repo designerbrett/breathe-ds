@@ -1,0 +1,38 @@
+/* Menu component spacing overrides for Breathe Design System */
+
+/* Menu dropdown container */
+.mantine-Menu-dropdown {
+  padding: 8px !important; /* xs spacing */
+  border-radius: 8px !important; /* md radius */
+}
+
+/* Menu items - comfortable padding for clicking */
+.mantine-Menu-item {
+  padding: 10px 12px !important; /* Vertical 10px, horizontal 12px */
+  border-radius: 6px !important; /* sm radius */
+  min-height: 36px !important; /* Comfortable click target */
+}
+
+/* Menu labels - section headers */
+.mantine-Menu-label {
+  padding: 8px 12px !important; /* Match horizontal padding with items */
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #868e96 !important; /* Muted gray */
+}
+
+/* Menu divider - proper spacing */
+.mantine-Menu-divider {
+  margin: 8px 0 !important; /* xs spacing top and bottom */
+}
+
+/* Icon spacing in menu items */
+.mantine-Menu-itemSection[data-position="left"] {
+  margin-right: 10px !important;
+}
+
+.mantine-Menu-itemSection[data-position="right"] {
+  margin-left: 10px !important;
+}

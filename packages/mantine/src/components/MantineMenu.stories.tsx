@@ -4,6 +4,7 @@ import { MantineProvider } from '@mantine/core';
 import { Edit, Copy, Share, Trash2, File, FolderOpen, Save, Download, BarChart3, DoorOpen, User, ClipboardList, MessageCircle, Phone, Mail, Calendar, FileText, Settings, Bell, HelpCircle, Eye, CheckCircle, XCircle } from 'lucide-react';
 import { breatheMantineTheme } from '../theme';
 import '@mantine/core/styles.css';
+import '../menu-overrides.css';
 
 const meta = {
   title: 'Internal/Mantine/Menu',

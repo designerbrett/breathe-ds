@@ -12,7 +12,8 @@
       "types": "./dist/index.d.ts"
     },
     "./button-overrides.css": "./src/button-overrides.css",
-    "./card-overrides.css": "./src/card-overrides.css"
+    "./card-overrides.css": "./src/card-overrides.css",
+    "./menu-overrides.css": "./src/menu-overrides.css"
   },
   "scripts": {
     "build": "vite build && tsc --emitDeclarationOnly",

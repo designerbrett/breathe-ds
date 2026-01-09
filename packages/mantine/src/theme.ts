@@ -138,5 +138,50 @@ export const breatheMantineTheme: MantineThemeOverride = {
         },
       },
     },
+    Card: {
+      defaultProps: {
+        padding: 'lg',
+        radius: 'md',
+        shadow: 'sm',
+      },
+    },
+    Stack: {
+      defaultProps: {
+        gap: 'md', // 16px from theme.spacing.md
+      },
+    },
+    Group: {
+      defaultProps: {
+        gap: 'md', // 16px from theme.spacing.md
+      },
+    },
+    Grid: {
+      defaultProps: {
+        gutter: 'md', // 16px from theme.spacing.md
+      },
+    },
+    Modal: {
+      defaultProps: {
+        padding: 'lg',
+        radius: 'md',
+      },
+    },
+    Paper: {
+      defaultProps: {
+        padding: 'md',
+        radius: 'md',
+        shadow: 'xs',
+      },
+    },
+    Tabs: {
+      defaultProps: {
+        radius: 'md',
+      },
+    },
+    Accordion: {
+      defaultProps: {
+        radius: 'md',
+      },
+    },
   },
 };

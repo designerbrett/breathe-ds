@@ -171,7 +171,17 @@ function App() {
 
 **Available Mantine Components:**
 - All Mantine components themed with Breathe design tokens
-- Button, Table, Form, Modal, etc.
+- Button, Table, Form, Modal, Card, Stack, Grid, etc.
+
+**Default Spacing (no props needed):**
+- `Card`: 24px padding, medium radius, small shadow
+- `Stack` / `Group`: 16px gap between children
+- `Grid`: 16px gutter between columns
+- `Modal`: 24px padding, medium radius
+- `Paper`: 16px padding, medium radius, extra-small shadow
+- `Tabs` / `Accordion`: medium radius
+
+These defaults ensure consistent spacing throughout your app without having to specify props every time.
 
 ## Design Tokens
 

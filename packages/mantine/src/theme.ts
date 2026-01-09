@@ -140,9 +140,23 @@ export const breatheMantineTheme: MantineThemeOverride = {
     },
     Card: {
       defaultProps: {
-        padding: 'lg',
-        radius: 'md',
+        padding: 'lg', // 24px from theme.spacing.lg
+        radius: 'md', // 8px from theme.radius.md
         shadow: 'sm',
+        withBorder: false,
+      },
+      styles: (theme) => ({
+        root: {
+          // Only apply padding if no padding prop is provided
+          '&:not([data-padding])': {
+            padding: 'var(--mantine-spacing-lg)',
+          },
+        },
+      }),
+    },
+    'Card.Section': {
+      defaultProps: {
+        padding: 'md', // 16px for card sections
       },
     },
     Stack: {

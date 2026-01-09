@@ -145,14 +145,6 @@ export const breatheMantineTheme: MantineThemeOverride = {
         shadow: 'sm',
         withBorder: false,
       },
-      styles: (theme) => ({
-        root: {
-          // Only apply padding if no padding prop is provided
-          '&:not([data-padding])': {
-            padding: 'var(--mantine-spacing-lg)',
-          },
-        },
-      }),
     },
     'Card.Section': {
       defaultProps: {

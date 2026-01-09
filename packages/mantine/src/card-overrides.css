@@ -1,0 +1,33 @@
+/* Card default spacing overrides for Breathe Design System */
+
+/* Apply default padding to all Cards that don't have explicit padding */
+.mantine-Card-root {
+  padding: 24px !important; /* lg spacing */
+  border-radius: 8px !important; /* md radius */
+}
+
+/* Card with explicit padding props - use Mantine's CSS variables */
+.mantine-Card-root[data-padding="xs"] {
+  padding: var(--mantine-spacing-xs) !important;
+}
+
+.mantine-Card-root[data-padding="sm"] {
+  padding: var(--mantine-spacing-sm) !important;
+}
+
+.mantine-Card-root[data-padding="md"] {
+  padding: var(--mantine-spacing-md) !important;
+}
+
+.mantine-Card-root[data-padding="lg"] {
+  padding: var(--mantine-spacing-lg) !important;
+}
+
+.mantine-Card-root[data-padding="xl"] {
+  padding: var(--mantine-spacing-xl) !important;
+}
+
+/* Card.Section default padding */
+.mantine-Card-section {
+  padding: 16px; /* md spacing for sections */
+}

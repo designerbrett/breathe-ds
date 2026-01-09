@@ -159,6 +159,7 @@ import { MantineProvider } from '@mantine/core';
 import { breatheMantineTheme } from '@breathe-ds/mantine';
 import '@mantine/core/styles.css';
 import '@breathe-ds/mantine/button-overrides.css'; // Import button styles
+import '@breathe-ds/mantine/card-overrides.css'; // Import card styles
 
 function App() {
   return (
@@ -173,15 +174,31 @@ function App() {
 - All Mantine components themed with Breathe design tokens
 - Button, Table, Form, Modal, Card, Stack, Grid, etc.
 
-**Default Spacing (no props needed):**
-- `Card`: 24px padding, medium radius, small shadow
-- `Stack` / `Group`: 16px gap between children
-- `Grid`: 16px gutter between columns
-- `Modal`: 24px padding, medium radius
-- `Paper`: 16px padding, medium radius, extra-small shadow
-- `Tabs` / `Accordion`: medium radius
+**Default Spacing (automatically applied via CSS):**
+- `Card`: 24px padding, 8px radius (automatically applied)
+- `Stack` / `Group`: 16px gap between children (default)
+- `Grid`: 16px gutter between columns (default)
+- `Modal`: 24px padding (default), medium radius
+- `Paper`: Use `padding="md"` (16px), `radius="md"` (8px)
+- `Tabs` / `Accordion`: medium radius (default)
 
-These defaults ensure consistent spacing throughout your app without having to specify props every time.
+**Usage Example:**
+```tsx
+import { Card, Stack, Text } from '@mantine/core';
+
+// Cards automatically have 24px padding from CSS overrides
+<Card shadow="sm">
+  <Stack> {/* gap="md" is default */}
+    <Text fw={600}>Title</Text>
+    <Text>Content here</Text>
+  </Stack>
+</Card>
+
+// Override padding if needed
+<Card padding="xl" shadow="sm">
+  <Text>Larger padding</Text>
+</Card>
+```
 
 ## Design Tokens
 
@@ -261,6 +278,7 @@ import { MantineProvider } from '@mantine/core';
 import { breatheMantineTheme } from '@breathe-ds/mantine';
 import '@mantine/core/styles.css';
 import '@breathe-ds/mantine/button-overrides.css';
+import '@breathe-ds/mantine/card-overrides.css';
 
 // Wrap your app with MantineProvider
 <MantineProvider theme={breatheMantineTheme}>

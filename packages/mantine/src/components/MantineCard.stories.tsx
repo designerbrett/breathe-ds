@@ -3,6 +3,7 @@ import { Card, Text, Button, Group } from '@mantine/core';
 import { MantineProvider } from '@mantine/core';
 import { breatheMantineTheme } from '../theme';
 import '@mantine/core/styles.css';
+import '../card-overrides.css';
 
 const meta = {
   title: 'Internal/Mantine/Card',
@@ -32,6 +33,9 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    padding: 'lg', // 24px padding
+    radius: 'md', // 8px radius
+    shadow: 'sm', // Small shadow
     children: (
       <>
         <Text fw={600} size="lg" mb="xs">
@@ -124,7 +128,7 @@ export const Interactive: Story = {
 export const AllVariants: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '500px' }}>
-      <Card withBorder>
+      <Card padding="lg" radius="md" withBorder>
         <Text fw={600} mb="xs">
           With Border
         </Text>
@@ -133,7 +137,7 @@ export const AllVariants: Story = {
         </Text>
       </Card>
 
-      <Card shadow="sm" withBorder>
+      <Card padding="lg" radius="md" shadow="sm" withBorder>
         <Text fw={600} mb="xs">
           With Shadow & Border
         </Text>

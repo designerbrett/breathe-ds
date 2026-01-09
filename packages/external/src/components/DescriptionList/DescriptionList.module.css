@@ -1,0 +1,115 @@
+/* Base list styles */
+.list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Item container */
+.item {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+/* Horizontal layout (default) */
+.horizontal .item {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.horizontal .term {
+  flex: 0 0 200px;
+  font-weight: 600;
+}
+
+.horizontal .description {
+  flex: 1;
+}
+
+/* Vertical layout */
+.vertical .item {
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Term styling */
+.term {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2D4A5F; /* neutral.slate */
+  line-height: 1.5;
+}
+
+/* Description styling */
+.description {
+  margin: 0;
+  font-size: 16px;
+  color: #5A6C7D; /* neutral.gray */
+  line-height: 1.6;
+}
+
+/* Dividers */
+.dividers .item {
+  border-bottom: 1px solid #E8EDF2; /* neutral.border */
+}
+
+.dividers .item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.dividers .item:first-child {
+  padding-top: 0;
+}
+
+/* Column layouts (for horizontal orientation) */
+.columns-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 32px;
+}
+
+.columns-2 .item {
+  padding: 0;
+}
+
+.columns-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 32px;
+}
+
+.columns-3 .item {
+  padding: 0;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .columns-2,
+  .columns-3 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .horizontal .item {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .horizontal .term {
+    flex: none;
+  }
+
+  .term,
+  .description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .columns-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

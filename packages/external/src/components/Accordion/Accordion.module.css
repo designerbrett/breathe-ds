@@ -1,0 +1,135 @@
+/* Accordion container */
+.accordion {
+  width: 100%;
+  border: 1px solid #E8EDF2; /* neutral.border */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Accordion item */
+.item {
+  border-bottom: 1px solid #E8EDF2;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+/* Header/trigger button */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease;
+  min-height: 64px; /* Touch-friendly target */
+}
+
+.header:hover {
+  background-color: #F8FAFB; /* neutral.bgSoft */
+}
+
+.header:focus {
+  outline: 2px solid #2B79B9; /* primary.main */
+  outline-offset: -2px;
+  z-index: 1;
+  position: relative;
+}
+
+.header:active {
+  background-color: #E8F2FA; /* primary.light */
+}
+
+/* Title */
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1A2B3D; /* neutral.deepNavy */
+  flex: 1;
+  padding-right: 16px;
+}
+
+/* Icon */
+.icon {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2B79B9; /* primary.main */
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.expanded .icon {
+  transform: rotate(0deg);
+}
+
+/* Content area */
+.content {
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.content[hidden] {
+  display: none;
+}
+
+.contentInner {
+  padding: 0 24px 24px 24px;
+  color: #5A6C7D; /* neutral.gray */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Expanded state */
+.expanded .header {
+  background-color: #F8FAFB; /* neutral.bgSoft */
+}
+
+/* Disabled state */
+.disabled .header {
+  cursor: not-allowed;
+  opacity: 0.5;
+  background-color: #FAFBFC; /* neutral.bgPage */
+}
+
+.disabled .header:hover {
+  background-color: #FAFBFC;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .header {
+    padding: 16px 20px;
+    min-height: 56px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .contentInner {
+    padding: 0 20px 20px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Accessibility - reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .content,
+  .icon {
+    transition: none;
+  }
+}

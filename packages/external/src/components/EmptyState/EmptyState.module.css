@@ -1,0 +1,124 @@
+/* EmptyState - No content display for External mode (65+ audience) */
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px;
+  min-height: 300px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Icon/Illustration */
+.icon {
+  font-size: 64px;
+  line-height: 1;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+/* Content */
+.content {
+  max-width: 480px;
+  margin-bottom: 32px;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1A2B3D;
+  margin: 0 0 12px 0;
+}
+
+.description {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #5A6C7D;
+  margin: 0;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.primaryAction {
+  width: 100%;
+}
+
+.primaryAction > * {
+  width: 100%;
+}
+
+.secondaryAction {
+  width: 100%;
+}
+
+.secondaryAction > * {
+  width: 100%;
+}
+
+/* Variant styling */
+.emptyState.search .icon {
+  color: #2B79B9;
+}
+
+.emptyState.error .icon {
+  color: #E74C3C;
+}
+
+.emptyState.success .icon {
+  color: #27AE60;
+}
+
+.emptyState.default .icon {
+  color: #7B8A99;
+}
+
+/* Mobile optimization */
+@media (max-width: 640px) {
+  .emptyState {
+    padding: 32px 20px;
+    min-height: 250px;
+  }
+
+  .icon {
+    font-size: 56px;
+    margin-bottom: 20px;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
+
+/* Tablet and up - horizontal layout for actions */
+@media (min-width: 640px) {
+  .actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .primaryAction,
+  .secondaryAction {
+    width: auto;
+    min-width: 160px;
+  }
+
+  .primaryAction > *,
+  .secondaryAction > * {
+    width: auto;
+  }
+}

@@ -1,0 +1,72 @@
+/* Container */
+.container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Alignment variants */
+.align-left {
+  justify-content: flex-start;
+}
+
+.align-center {
+  justify-content: center;
+}
+
+.align-right {
+  justify-content: flex-end;
+}
+
+/* Secondary actions group */
+.secondaryActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Individual action */
+.action {
+  flex-shrink: 0;
+}
+
+/* Primary action */
+.primaryAction {
+  flex-shrink: 0;
+}
+
+/* Mobile stacking */
+@media (max-width: 640px) {
+  .stackOnMobile {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .stackOnMobile .secondaryActions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .stackOnMobile .action {
+    width: 100%;
+  }
+
+  .stackOnMobile .action > * {
+    width: 100%;
+  }
+
+  .stackOnMobile .primaryAction {
+    width: 100%;
+  }
+
+  .stackOnMobile .primaryAction > * {
+    width: 100%;
+  }
+
+  .stackOnMobile.align-left,
+  .stackOnMobile.align-right,
+  .stackOnMobile.align-center {
+    justify-content: stretch;
+  }
+}

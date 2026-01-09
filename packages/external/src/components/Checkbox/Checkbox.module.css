@@ -1,0 +1,138 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border: 2px solid #E8EDF2;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  background: #FFFFFF;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.input:hover:not(:disabled) {
+  border-color: #2B79B9;
+}
+
+.input:checked {
+  background: #2B79B9;
+  border-color: #2B79B9;
+}
+
+.input:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 0 3px 3px;
+  transform: translate(-50%, -60%) rotate(-45deg);
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(43, 121, 185, 0.1);
+}
+
+.input:focus-visible {
+  outline: 4px solid rgba(43, 121, 185, 0.3);
+  outline-offset: 2px;
+}
+
+.input:disabled {
+  background: #F8FAFB;
+  border-color: #E8EDF2;
+  cursor: not-allowed;
+}
+
+.input:disabled:checked {
+  background: #A8B5C2;
+  border-color: #A8B5C2;
+}
+
+/* Error state */
+.input.error {
+  border-color: #E74C3C;
+}
+
+.input.error:focus {
+  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.1);
+}
+
+/* Size variants */
+.size-large {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 8px;
+}
+
+.size-large:checked::after {
+  width: 16px;
+  height: 12px;
+  border-width: 0 0 3.5px 3.5px;
+}
+
+/* Label */
+.label {
+  font-size: 17px;
+  color: #1A2B3D;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  cursor: pointer;
+  user-select: none;
+  padding-top: 2px;
+}
+
+.label.disabled {
+  color: #A8B5C2;
+  cursor: not-allowed;
+}
+
+/* Helper text */
+.helperText {
+  font-size: 14px;
+  color: #7B8A99;
+  line-height: 1.5;
+  margin-left: 40px;
+}
+
+/* Error text */
+.errorText {
+  font-size: 14px;
+  color: #E74C3C;
+  font-weight: 500;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  margin-left: 40px;
+}
+
+.errorText::before {
+  content: '⚠';
+  flex-shrink: 0;
+}

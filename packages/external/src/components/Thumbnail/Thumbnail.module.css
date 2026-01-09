@@ -1,0 +1,118 @@
+/* Base thumbnail container */
+.thumbnail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #F8FAFB; /* neutral.bgSoft */
+  border: 1px solid #E8EDF2; /* neutral.border */
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Image */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Size variants */
+.small {
+  width: 40px;
+  height: 40px;
+}
+
+.medium {
+  width: 64px;
+  height: 64px;
+}
+
+.large {
+  width: 96px;
+  height: 96px;
+}
+
+.xlarge {
+  width: 128px;
+  height: 128px;
+}
+
+/* Shape variants */
+.square {
+  border-radius: 4px;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+/* Interactive state */
+.interactive {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.interactive:hover {
+  border-color: #2B79B9; /* primary.main */
+  box-shadow: 0 0 0 2px rgba(43, 121, 185, 0.1);
+  transform: scale(1.05);
+}
+
+.interactive:focus {
+  outline: 2px solid #2B79B9; /* primary.main */
+  outline-offset: 2px;
+}
+
+.interactive:active {
+  transform: scale(0.98);
+}
+
+/* Loading state placeholder */
+.thumbnail:empty::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #E8EDF2 0%,
+    #F8FAFB 50%,
+    #E8EDF2 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Accessibility - reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .interactive {
+    transition: none;
+  }
+
+  .interactive:hover {
+    transform: none;
+  }
+
+  .interactive:active {
+    transform: none;
+  }
+
+  .thumbnail:empty::before {
+    animation: none;
+  }
+}

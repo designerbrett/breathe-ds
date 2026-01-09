@@ -1,0 +1,137 @@
+/* Pagination container */
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Disabled state */
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Base button */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  min-height: 56px;
+  padding: 0 16px;
+  background-color: #FFFFFF;
+  border: 1px solid #E8EDF2; /* neutral.border */
+  border-radius: 8px;
+  color: #2D4A5F; /* neutral.slate */
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.button:hover:not(:disabled) {
+  background-color: #F8FAFB; /* neutral.bgSoft */
+  border-color: #2B79B9; /* primary.main */
+  color: #2B79B9;
+}
+
+.button:focus {
+  outline: 2px solid #2B79B9;
+  outline-offset: 2px;
+  z-index: 1;
+}
+
+.button:active:not(:disabled) {
+  background-color: #E8F2FA; /* primary.light */
+}
+
+/* Page button */
+.pageButton {
+  min-width: 56px;
+}
+
+/* Control buttons (prev/next/first/last) */
+.controlButton {
+  min-width: auto;
+  white-space: nowrap;
+}
+
+/* Active page */
+.button.active {
+  background-color: #2B79B9; /* primary.main */
+  border-color: #2B79B9;
+  color: #FFFFFF;
+  cursor: default;
+}
+
+.button.active:hover {
+  background-color: #2B79B9;
+  border-color: #2B79B9;
+  color: #FFFFFF;
+}
+
+/* Disabled button */
+.buttonDisabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.buttonDisabled:hover {
+  background-color: #FFFFFF;
+  border-color: #E8EDF2;
+  color: #2D4A5F;
+}
+
+/* Ellipsis */
+.ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  min-height: 56px;
+  color: #7B8A99; /* neutral.grayLight */
+  font-size: 20px;
+  user-select: none;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .pagination {
+    gap: 6px;
+  }
+
+  .button {
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0 12px;
+    font-size: 15px;
+  }
+
+  .controlButton {
+    min-width: auto;
+    padding: 0 12px;
+  }
+
+  .ellipsis {
+    min-width: 48px;
+    min-height: 48px;
+    font-size: 18px;
+  }
+
+  /* Hide some page numbers on very small screens */
+  @media (max-width: 480px) {
+    .pageButton:not(.active) {
+      min-width: 44px;
+      padding: 0 8px;
+    }
+  }
+}
+
+/* Accessibility - reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

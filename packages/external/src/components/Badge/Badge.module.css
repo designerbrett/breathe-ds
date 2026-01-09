@@ -1,0 +1,64 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* Variants */
+.variant-default {
+  background: #E8EDF2;
+  color: #2D4A5F;
+}
+
+.variant-success {
+  background: #E8F8F5;
+  color: #27AE60;
+  border: 1px solid #27AE60;
+}
+
+.variant-warning {
+  background: #FFF4E6;
+  color: #E67E22;
+  border: 1px solid #E67E22;
+}
+
+.variant-error {
+  background: #FFEBEE;
+  color: #E74C3C;
+  border: 1px solid #E74C3C;
+}
+
+.variant-info {
+  background: #E3F2FD;
+  color: #2980B9;
+  border: 1px solid #2980B9;
+}
+
+/* Size variants */
+.size-default {
+  padding: 6px 14px;
+  font-size: 13px;
+  min-height: 28px;
+}
+
+.size-large {
+  padding: 8px 18px;
+  font-size: 15px;
+  min-height: 36px;
+  border-radius: 24px;
+}
+
+/* Ensure good contrast */
+.badge {
+  /* Prevents badge from shrinking in flex containers */
+  flex-shrink: 0;
+}

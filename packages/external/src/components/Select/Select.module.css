@@ -1,0 +1,122 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2D4A5F;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.required {
+  color: #E74C3C;
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.select {
+  width: 100%;
+  padding: 16px;
+  padding-right: 48px; /* Space for chevron */
+  font-size: 17px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1A2B3D;
+  background: #FFFFFF;
+  border: 2px solid #E8EDF2;
+  border-radius: 12px;
+  min-height: 56px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1.5;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.select:hover:not(:disabled) {
+  border-color: #2B79B9;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #2B79B9;
+  box-shadow: 0 0 0 4px rgba(43, 121, 185, 0.1);
+}
+
+.select:disabled {
+  background: #F8FAFB;
+  color: #A8B5C2;
+  cursor: not-allowed;
+  border-color: #E8EDF2;
+}
+
+/* Error state */
+.select.error {
+  border-color: #E74C3C;
+}
+
+.select.error:focus {
+  border-color: #E74C3C;
+  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.1);
+}
+
+/* Size variants */
+.size-large {
+  padding: 20px;
+  padding-right: 52px;
+  font-size: 18px;
+  min-height: 64px;
+  border-radius: 16px;
+}
+
+/* Chevron icon */
+.chevron {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #5A6C7D;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select:disabled + .chevron {
+  color: #A8B5C2;
+}
+
+/* Helper text */
+.helperText {
+  font-size: 14px;
+  color: #7B8A99;
+  line-height: 1.5;
+}
+
+/* Error text */
+.errorText {
+  font-size: 14px;
+  color: #E74C3C;
+  font-weight: 500;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.errorText::before {
+  content: '⚠';
+  flex-shrink: 0;
+}
+
+/* Accessibility: Ensure focus is visible */
+.select:focus-visible {
+  outline: 4px solid rgba(43, 121, 185, 0.3);
+  outline-offset: 2px;
+}

@@ -1,0 +1,156 @@
+/* TextArea - Multi-line text input for External mode (65+ audience) */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2D4A5F;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.required {
+  color: #E74C3C;
+}
+
+.textareaWrapper {
+  position: relative;
+}
+
+.textarea {
+  width: 100%;
+  padding: 16px;
+  font-size: 17px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1A2B3D;
+  background: #FFFFFF;
+  border: 2px solid #E8EDF2;
+  border-radius: 12px;
+  min-height: 120px;
+  transition: all 0.2s ease;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.textarea.autoResize {
+  resize: none;
+  overflow-y: hidden;
+}
+
+.textarea::placeholder {
+  color: #A8B5C2;
+}
+
+.textarea:hover:not(:disabled) {
+  border-color: #2B79B9;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #2B79B9;
+  box-shadow: 0 0 0 4px rgba(43, 121, 185, 0.1);
+}
+
+.textarea:disabled {
+  background: #F8FAFB;
+  color: #A8B5C2;
+  cursor: not-allowed;
+  border-color: #E8EDF2;
+  resize: none;
+}
+
+/* Error state */
+.textarea.error {
+  border-color: #E74C3C;
+}
+
+.textarea.error:focus {
+  border-color: #E74C3C;
+  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.1);
+}
+
+/* Success state */
+.textarea.success {
+  border-color: #27AE60;
+}
+
+.textarea.success:focus {
+  border-color: #27AE60;
+  box-shadow: 0 0 0 4px rgba(39, 174, 96, 0.1);
+}
+
+/* Character count */
+.characterCount {
+  font-size: 14px;
+  color: #7B8A99;
+  text-align: right;
+  margin-top: -4px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.characterCount.nearLimit {
+  color: #E67E22;
+  font-weight: 500;
+}
+
+.characterCount.overLimit {
+  color: #E74C3C;
+  font-weight: 600;
+}
+
+/* Helper text */
+.helperText {
+  font-size: 14px;
+  color: #7B8A99;
+  line-height: 1.5;
+}
+
+/* Error text */
+.errorText {
+  font-size: 14px;
+  color: #E74C3C;
+  font-weight: 500;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.errorText::before {
+  content: '⚠';
+  flex-shrink: 0;
+}
+
+/* Success text */
+.successText {
+  font-size: 14px;
+  color: #27AE60;
+  font-weight: 500;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.successText::before {
+  content: '✓';
+  flex-shrink: 0;
+}
+
+/* Accessibility: Ensure focus is visible */
+.textarea:focus-visible {
+  outline: 4px solid rgba(43, 121, 185, 0.3);
+  outline-offset: 2px;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .textarea {
+    font-size: 16px; /* Prevent iOS zoom */
+  }
+}

@@ -1,0 +1,70 @@
+/* Button hover state overrides for Breathe Design System */
+
+/* Primary button - darker blue on hover (exclude red color) */
+.mantine-Button-root[data-variant="filled"]:not([data-button-color="red"]):not([data-disabled]):hover,
+.mantine-Button-root:not([data-variant]):not([data-button-color="red"]):not([data-disabled]):hover {
+  background: linear-gradient(180deg, rgba(48, 48, 48, 0.00) 63.53%, rgba(255, 255, 255, 0.15) 100%), #236199 !important;
+}
+
+/* Critical button - darker red on hover */
+.mantine-Button-root[data-button-color="red"]:not([data-disabled]):hover {
+  background: linear-gradient(180deg, rgba(48, 48, 48, 0.00) 63.53%, rgba(255, 255, 255, 0.15) 100%), #C7392D !important;
+}
+
+/* Secondary (outline) button - gray background on hover */
+.mantine-Button-root[data-variant="outline"]:not([data-disabled]):hover {
+  background: #F0F0F0 !important;
+}
+
+/* Tertiary (subtle) button - light gray background on hover */
+.mantine-Button-root[data-variant="subtle"]:not([data-disabled]):hover {
+  background: #F0F0F0 !important;
+}
+
+/* Light button - light gray background on hover */
+.mantine-Button-root[data-variant="light"]:not([data-disabled]):hover {
+  background: #F0F0F0 !important;
+}
+
+/* Disabled states for all variants */
+.mantine-Button-root[data-variant="filled"]:not([data-button-color="red"])[data-disabled],
+.mantine-Button-root[data-variant="filled"]:not([data-button-color="red"]):disabled,
+.mantine-Button-root:not([data-variant]):not([data-button-color="red"])[data-disabled],
+.mantine-Button-root:not([data-variant]):not([data-button-color="red"]):disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  background: linear-gradient(180deg, rgba(48, 48, 48, 0.00) 63.53%, rgba(255, 255, 255, 0.15) 100%), #2B79B9 !important;
+  box-shadow: 0 -1px 0 1px #1D517C inset, 0 0 0 1px #1D517C inset, 0 0.5px 0 1.5px rgba(255, 255, 255, 0.25) inset !important;
+}
+
+.mantine-Button-root[data-button-color="red"][data-disabled],
+.mantine-Button-root[data-button-color="red"]:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  background: linear-gradient(180deg, rgba(48, 48, 48, 0.00) 63.53%, rgba(255, 255, 255, 0.15) 100%), #E74C3C !important;
+  box-shadow: 0 -1px 0 1px rgba(183, 60, 47, 0.80) inset, 0 0 0 1px rgba(204, 66, 52, 0.80) inset, 0 0.5px 0 1.5px rgba(247, 128, 134, 0.64) inset !important;
+}
+
+.mantine-Button-root[data-variant="outline"][data-disabled],
+.mantine-Button-root[data-variant="outline"]:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  background: rgba(250, 250, 250, 1) !important;
+  box-shadow: 0 -1px 0 0 #B5B5B5 inset, 0 0 0 1px rgba(0, 0, 0, 0.10) inset, 0 0.5px 0 1.5px rgba(255, 255, 255, 0.8) inset !important;
+}
+
+.mantine-Button-root[data-variant="subtle"][data-disabled],
+.mantine-Button-root[data-variant="subtle"]:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  background: transparent !important;
+  color: #2B79B9 !important;
+}
+
+.mantine-Button-root[data-variant="light"][data-disabled],
+.mantine-Button-root[data-variant="light"]:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  background: transparent !important;
+  color: #5C5F62 !important;
+}

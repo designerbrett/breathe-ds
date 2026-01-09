@@ -16,7 +16,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'outline', 'ghost'],
+      options: ['primary', 'secondary', 'critical', 'tertiary', 'light'],
       description: 'Button visual variant',
     },
     size: {
@@ -48,16 +48,23 @@ export const Secondary: Story = {
   },
 };
 
-export const Outline: Story = {
+export const Critical: Story = {
   args: {
-    variant: 'outline',
+    variant: 'critical',
+    children: 'Delete Account',
+  },
+};
+
+export const Tertiary: Story = {
+  args: {
+    variant: 'tertiary',
     children: 'Learn More',
   },
 };
 
-export const Ghost: Story = {
+export const Light: Story = {
   args: {
-    variant: 'ghost',
+    variant: 'light',
     children: 'Skip',
   },
 };
@@ -67,8 +74,9 @@ export const AllVariants: Story = {
     <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
       <Button variant="primary">Primary</Button>
       <Button variant="secondary">Secondary</Button>
-      <Button variant="outline">Outline</Button>
-      <Button variant="ghost">Ghost</Button>
+      <Button variant="critical">Critical</Button>
+      <Button variant="tertiary">Tertiary</Button>
+      <Button variant="light">Light</Button>
     </div>
   ),
 };
@@ -89,4 +97,16 @@ export const Disabled: Story = {
     children: 'Disabled Button',
     disabled: true,
   },
+};
+
+export const AllDisabled: Story = {
+  render: () => (
+    <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+      <Button variant="primary" disabled>Primary</Button>
+      <Button variant="secondary" disabled>Secondary</Button>
+      <Button variant="critical" disabled>Critical</Button>
+      <Button variant="tertiary" disabled>Tertiary</Button>
+      <Button variant="light" disabled>Light</Button>
+    </div>
+  ),
 };

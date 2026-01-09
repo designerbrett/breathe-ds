@@ -1,0 +1,202 @@
+/* SearchInput - Search input field for External mode (65+ audience) */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2D4A5F;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 16px 56px 16px 52px;
+  font-size: 17px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1A2B3D;
+  background: #FFFFFF;
+  border: 2px solid #E8EDF2;
+  border-radius: 12px;
+  min-height: 56px;
+  transition: all 0.2s ease;
+  line-height: 1.5;
+}
+
+.input.withButton {
+  padding-right: 8px;
+}
+
+/* Remove default search input styling */
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.input::placeholder {
+  color: #A8B5C2;
+}
+
+.input:hover:not(:disabled) {
+  border-color: #2B79B9;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2B79B9;
+  box-shadow: 0 0 0 4px rgba(43, 121, 185, 0.1);
+}
+
+.input:disabled {
+  background: #F8FAFB;
+  color: #A8B5C2;
+  cursor: not-allowed;
+  border-color: #E8EDF2;
+}
+
+/* Search icon */
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #7B8A99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Clear button - 44px touch target */
+.clearButton {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #7B8A99;
+  border-radius: 8px;
+  transition: background-color 150ms ease, color 150ms ease;
+  z-index: 2;
+}
+
+.clearButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #2D4A5F;
+}
+
+.clearButton:focus-visible {
+  outline: 2px solid #2B79B9;
+  outline-offset: 2px;
+}
+
+.clearButton:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Search button */
+.searchButton {
+  flex-shrink: 0;
+  height: 44px;
+  padding: 0 20px;
+  border: none;
+  background: #2B79B9;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 100ms ease;
+  white-space: nowrap;
+}
+
+.searchButton:hover:not(:disabled) {
+  background: #1F5A8E;
+}
+
+.searchButton:focus-visible {
+  outline: 2px solid #2B79B9;
+  outline-offset: 2px;
+}
+
+.searchButton:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.searchButton:disabled {
+  background: #E8EDF2;
+  color: #A8B5C2;
+  cursor: not-allowed;
+}
+
+/* Helper text */
+.helperText {
+  font-size: 14px;
+  color: #7B8A99;
+  line-height: 1.5;
+}
+
+/* Accessibility: Ensure focus is visible */
+.input:focus-visible {
+  outline: 4px solid rgba(43, 121, 185, 0.3);
+  outline-offset: 2px;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .input {
+    font-size: 16px; /* Prevent iOS zoom */
+  }
+
+  .searchButton {
+    padding: 0 16px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+  }
+
+  .input,
+  .clearButton,
+  .searchButton {
+    transition: none;
+  }
+}

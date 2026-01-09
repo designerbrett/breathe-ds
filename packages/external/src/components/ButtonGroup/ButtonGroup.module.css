@@ -1,0 +1,68 @@
+/* Base button group styles */
+.buttonGroup {
+  display: flex;
+  align-items: stretch;
+}
+
+/* Horizontal layout */
+.horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Vertical layout */
+.vertical {
+  flex-direction: column;
+}
+
+/* Full width variant */
+.fullWidth {
+  width: 100%;
+}
+
+.fullWidth > * {
+  flex: 1;
+}
+
+/* Spacing variants */
+.spacing-none {
+  gap: 0;
+}
+
+/* Connected buttons (no gap) */
+.spacing-none.horizontal > *:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px; /* Prevent double borders */
+}
+
+.spacing-none.horizontal > *:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.spacing-none.vertical > *:not(:first-child) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: -1px; /* Prevent double borders */
+}
+
+.spacing-none.vertical > *:not(:last-child) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.spacing-small {
+  gap: 8px;
+}
+
+.spacing-medium {
+  gap: 16px;
+}
+
+/* Ensure buttons maintain proper z-index on hover/focus */
+.spacing-none > *:hover,
+.spacing-none > *:focus {
+  position: relative;
+  z-index: 1;
+}

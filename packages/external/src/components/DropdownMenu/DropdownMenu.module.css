@@ -1,0 +1,196 @@
+/* DropdownMenu - Action menu for External mode (65+ audience) */
+
+.dropdownWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.menu {
+  position: absolute;
+  z-index: 1000;
+  min-width: 200px;
+  background: #FFFFFF;
+  border: 2px solid #E8EDF2;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+  margin-top: 4px;
+  animation: menuSlideIn 150ms ease-out;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+@keyframes menuSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Position variants */
+.menu.bottom-left {
+  top: calc(100% + 4px);
+  left: 0;
+}
+
+.menu.bottom-right {
+  top: calc(100% + 4px);
+  right: 0;
+}
+
+.menu.top-left {
+  bottom: calc(100% + 4px);
+  left: 0;
+}
+
+.menu.top-right {
+  bottom: calc(100% + 4px);
+  right: 0;
+}
+
+/* Menu item - 44px minimum touch target */
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #1A2B3D;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.menuItem:hover:not(:disabled) {
+  background: #F8FAFB;
+}
+
+.menuItem:active:not(:disabled) {
+  background: #E8EDF2;
+}
+
+.menuItem:focus-visible {
+  outline: 2px solid #2B79B9;
+  outline-offset: -2px;
+}
+
+/* Icon */
+.icon {
+  flex-shrink: 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+/* Label */
+.label {
+  flex: 1;
+  font-weight: 500;
+}
+
+/* Disabled state */
+.menuItem.disabled {
+  color: #A8B5C2;
+  cursor: not-allowed;
+}
+
+.menuItem.disabled .icon {
+  opacity: 0.5;
+}
+
+/* Danger variant */
+.menuItem.danger {
+  color: #E74C3C;
+}
+
+.menuItem.danger:hover:not(:disabled) {
+  background: #FFEBEE;
+}
+
+.menuItem.danger:active:not(:disabled) {
+  background: #FADBD8;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: #E8EDF2;
+  margin: 8px 0;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .menu {
+    min-width: 180px;
+    max-width: calc(100vw - 32px);
+  }
+
+  .menuItem {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+
+  /* On mobile, prefer bottom-right or bottom-left based on position */
+  .menu.top-left,
+  .menu.top-right {
+    top: calc(100% + 4px);
+    bottom: auto;
+  }
+}
+
+/* Ensure menu stays within viewport */
+.menu {
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+/* Scrollbar styling for overflow */
+.menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.menu::-webkit-scrollbar-thumb {
+  background: #E8EDF2;
+  border-radius: 4px;
+}
+
+.menu::-webkit-scrollbar-thumb:hover {
+  background: #A8B5C2;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .menu {
+    animation: none;
+  }
+
+  .menuItem {
+    transition: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .menu {
+    border-width: 3px;
+  }
+
+  .menuItem:focus-visible {
+    outline-width: 3px;
+  }
+}

@@ -3,6 +3,7 @@ import { Button } from '@mantine/core';
 import { MantineProvider } from '@mantine/core';
 import { breatheMantineTheme } from '../theme';
 import '@mantine/core/styles.css';
+import '../button-overrides.css';
 
 const meta = {
   title: 'Internal/Mantine/Button',
@@ -41,7 +42,7 @@ export const AllVariants: Story = {
       <Button variant="outline">Secondary</Button>
       <Button variant="subtle">Tertiary</Button>
       <Button variant="light">Light</Button>
-      <Button color="red">Critical</Button>
+      <Button color="red" data-button-color="red">Critical</Button>
     </div>
   ),
 };
@@ -63,4 +64,16 @@ export const Disabled: Story = {
     children: 'Disabled Button',
     disabled: true,
   },
+};
+
+export const AllDisabled: Story = {
+  render: () => (
+    <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+      <Button disabled>Primary</Button>
+      <Button variant="outline" disabled>Secondary</Button>
+      <Button color="red" data-button-color="red" disabled>Critical</Button>
+      <Button variant="subtle" disabled>Tertiary</Button>
+      <Button variant="light" disabled>Light</Button>
+    </div>
+  ),
 };

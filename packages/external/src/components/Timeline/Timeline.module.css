@@ -1,0 +1,184 @@
+/* Timeline container */
+.timeline {
+  position: relative;
+  width: 100%;
+}
+
+/* Timeline item */
+.item {
+  position: relative;
+  display: flex;
+  gap: 24px;
+  padding-bottom: 32px;
+}
+
+.item:last-child {
+  padding-bottom: 0;
+}
+
+/* Timeline line (vertical connector) */
+.item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 15px; /* Center of 32px marker */
+  top: 32px;
+  bottom: 0;
+  width: 2px;
+  background-color: #E8EDF2; /* neutral.border */
+}
+
+/* Marker container */
+.marker {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border: 2px solid #E8EDF2;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Default dot */
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #2B79B9; /* primary.main */
+}
+
+/* Marker variants */
+.marker-success {
+  border-color: #27AE60; /* status.success */
+}
+
+.marker-success .dot {
+  background-color: #27AE60;
+}
+
+.marker-warning {
+  border-color: #E67E22; /* status.warning */
+}
+
+.marker-warning .dot {
+  background-color: #E67E22;
+}
+
+.marker-error {
+  border-color: #E74C3C; /* status.error */
+}
+
+.marker-error .dot {
+  background-color: #E74C3C;
+}
+
+.marker-info {
+  border-color: #2980B9; /* status.info */
+}
+
+.marker-info .dot {
+  background-color: #2980B9;
+}
+
+/* Content area */
+.content {
+  flex: 1;
+  padding-top: 2px;
+}
+
+/* Timestamp */
+.timestamp {
+  display: block;
+  font-size: 14px;
+  color: #7B8A99; /* neutral.grayLight */
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+/* Title */
+.title {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1A2B3D; /* neutral.deepNavy */
+  line-height: 1.4;
+}
+
+/* Description */
+.description {
+  font-size: 16px;
+  color: #5A6C7D; /* neutral.gray */
+  line-height: 1.6;
+}
+
+/* Position: center */
+.position-center .item {
+  padding-left: 50%;
+}
+
+.position-center .item:not(:last-child)::before {
+  left: calc(50% + 15px);
+}
+
+.position-center .marker {
+  position: absolute;
+  left: calc(50% - 16px);
+}
+
+.position-center .timestamp {
+  position: absolute;
+  right: calc(50% + 48px);
+  top: 6px;
+  text-align: right;
+}
+
+/* Position: right */
+.position-right .item {
+  flex-direction: row-reverse;
+}
+
+.position-right .item:not(:last-child)::before {
+  left: auto;
+  right: 15px;
+}
+
+.position-right .content {
+  text-align: right;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .position-center .item {
+    padding-left: 0;
+  }
+
+  .position-center .item:not(:last-child)::before {
+    left: 15px;
+  }
+
+  .position-center .marker {
+    position: static;
+    left: auto;
+  }
+
+  .position-center .timestamp {
+    position: static;
+    right: auto;
+    text-align: left;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .timestamp {
+    font-size: 12px;
+  }
+}

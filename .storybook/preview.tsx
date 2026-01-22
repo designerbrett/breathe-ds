@@ -44,6 +44,11 @@ const preview: Preview = {
         },
       ],
     },
+    options: {
+      storySort: {
+        order: ['Foundation', 'External', 'Internal', '*'],
+      },
+    },
   },
   decorators: [
     (Story, context) => {

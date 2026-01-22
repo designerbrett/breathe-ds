@@ -1,4 +1,4 @@
-import { colors } from './colors';
+import { colors, foundation, tokens } from './colors';
 import { typography } from './typography';
 import { spacing } from './spacing';
 
@@ -9,7 +9,9 @@ import { spacing } from './spacing';
 export const externalTheme = {
   name: 'External',
   description: 'Patient-facing mobile apps (65+ audience)',
-  colors: colors,
+  colors: colors,       // Legacy structure (backward compatible)
+  foundation: foundation, // New foundation color scales
+  tokens: tokens,       // New semantic tokens
   typography: typography.external,
   spacing: spacing.external,
 
@@ -47,7 +49,9 @@ export const externalTheme = {
 export const internalTheme = {
   name: 'Internal',
   description: 'Dashboards & admin tools (desktop)',
-  colors: colors,
+  colors: colors,       // Legacy structure (backward compatible)
+  foundation: foundation, // New foundation color scales
+  tokens: tokens,       // New semantic tokens
   typography: typography.internal,
   spacing: spacing.internal,
 

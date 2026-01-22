@@ -1,0 +1,39 @@
+.donutChart {
+  background: #FAFBFC;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1A2B3D;
+  margin-bottom: 16px;
+}
+
+.chartContainer {
+  position: relative;
+}
+
+.centerLabel {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.centerValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1A2B3D;
+}
+
+.centerText {
+  font-size: 11px;
+  color: #7B8A99;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

@@ -19,6 +19,12 @@
 | **[Figma Color Variables Guide](./figma-variables-guide.md)** | Detailed color variable setup |
 | **[Figma Exports README](../figma-exports/README.md)** | How to import color JSON files |
 
+### 📱 Platform Support
+
+| Document | What's Inside |
+|----------|---------------|
+| **[React Native Integration Guide](./react-native-guide.md)** | ⭐ Complete RN setup with numeric values, shadows, examples |
+
 ### 📝 Additional Resources
 
 | Document | What's Inside |
@@ -30,7 +36,7 @@
 
 ## Getting Started
 
-### For Developers
+### For Web Developers
 
 1. **Install the package:**
    ```bash
@@ -49,6 +55,26 @@
      shadows,     // Shadow tokens
    } from '@breathe-ds/core';
    ```
+
+### For React Native Developers
+
+1. **Install the package:**
+   ```bash
+   npm install @breathe-ds/core
+   ```
+
+2. **Import RN tokens** (automatic or explicit):
+   ```typescript
+   // Automatic - uses RN values when in RN environment
+   import { tokens, spacing, fontSize } from '@breathe-ds/core';
+
+   // Explicit - always use RN values
+   import { ReactNative } from '@breathe-ds/core';
+   const { tokens, spacing, fontSize } = ReactNative;
+   ```
+
+3. **Read the guide:**
+   - See [React Native Integration Guide](./react-native-guide.md) for complete setup
 
 3. **Use in your code:**
    ```typescript

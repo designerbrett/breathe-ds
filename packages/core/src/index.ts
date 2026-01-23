@@ -27,3 +27,7 @@ export * from './tokens/z-index';
 
 // Themes (combines all tokens)
 export * from './tokens/themes';
+
+// Platform-specific exports
+// React Native (numeric values instead of CSS strings)
+export * as ReactNative from './platforms/react-native';

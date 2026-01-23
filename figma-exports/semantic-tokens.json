@@ -1,0 +1,551 @@
+{
+  "name": "Tokens",
+  "modes": [
+    {
+      "name": "Default",
+      "modeId": "1"
+    }
+  ],
+  "variables": [
+    {
+      "name": "text/primary",
+      "type": "COLOR",
+      "description": "Main body text, headings. References: foundation.neutral.700",
+      "valuesByMode": {
+        "1": "#1A2B3D"
+      },
+      "scopes": ["TEXT_FILL"],
+      "codeSyntax": "text-primary"
+    },
+    {
+      "name": "text/secondary",
+      "type": "COLOR",
+      "description": "Secondary text. References: foundation.neutral.600",
+      "valuesByMode": {
+        "1": "#2D4A5F"
+      },
+      "scopes": ["TEXT_FILL"],
+      "codeSyntax": "text-secondary"
+    },
+    {
+      "name": "text/tertiary",
+      "type": "COLOR",
+      "description": "De-emphasized text. References: foundation.neutral.500",
+      "valuesByMode": {
+        "1": "#5A6C7D"
+      },
+      "scopes": ["TEXT_FILL"],
+      "codeSyntax": "text-tertiary"
+    },
+    {
+      "name": "text/disabled",
+      "type": "COLOR",
+      "description": "Disabled text. References: foundation.neutral.400",
+      "valuesByMode": {
+        "1": "#7B8A99"
+      },
+      "scopes": ["TEXT_FILL"],
+      "codeSyntax": "text-disabled"
+    },
+    {
+      "name": "text/placeholder",
+      "type": "COLOR",
+      "description": "Placeholder text. References: foundation.neutral.300",
+      "valuesByMode": {
+        "1": "#A8B5C2"
+      },
+      "scopes": ["TEXT_FILL"],
+      "codeSyntax": "text-placeholder"
+    },
+    {
+      "name": "text/inverse",
+      "type": "COLOR",
+      "description": "Text on dark backgrounds. References: foundation.neutral.0",
+      "valuesByMode": {
+        "1": "#FFFFFF"
+      },
+      "scopes": ["TEXT_FILL"],
+      "codeSyntax": "text-inverse"
+    },
+    {
+      "name": "text/brand",
+      "type": "COLOR",
+      "description": "Brand-colored text. References: foundation.blue.500",
+      "valuesByMode": {
+        "1": "#2B79B9"
+      },
+      "scopes": ["TEXT_FILL"],
+      "codeSyntax": "text-brand"
+    },
+    {
+      "name": "text/link",
+      "type": "COLOR",
+      "description": "Links. References: foundation.blue.500",
+      "valuesByMode": {
+        "1": "#2B79B9"
+      },
+      "scopes": ["TEXT_FILL"],
+      "codeSyntax": "text-link"
+    },
+    {
+      "name": "text/linkHover",
+      "type": "COLOR",
+      "description": "Link hover state. References: foundation.blue.600",
+      "valuesByMode": {
+        "1": "#1F5A8E"
+      },
+      "scopes": ["TEXT_FILL"],
+      "codeSyntax": "text-link-hover"
+    },
+    {
+      "name": "surface/page",
+      "type": "COLOR",
+      "description": "Main page background. References: foundation.neutral.50",
+      "valuesByMode": {
+        "1": "#FAFBFC"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "surface-page"
+    },
+    {
+      "name": "surface/default",
+      "type": "COLOR",
+      "description": "Default surface/card background. References: foundation.neutral.0",
+      "valuesByMode": {
+        "1": "#FFFFFF"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "surface-default"
+    },
+    {
+      "name": "surface/elevated",
+      "type": "COLOR",
+      "description": "Elevated surface. References: foundation.neutral.100",
+      "valuesByMode": {
+        "1": "#F8FAFB"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "surface-elevated"
+    },
+    {
+      "name": "surface/hover",
+      "type": "COLOR",
+      "description": "Hover state background. References: foundation.neutral.100",
+      "valuesByMode": {
+        "1": "#F8FAFB"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "surface-hover"
+    },
+    {
+      "name": "surface/pressed",
+      "type": "COLOR",
+      "description": "Pressed state background. References: foundation.neutral.200",
+      "valuesByMode": {
+        "1": "#E8EDF2"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "surface-pressed"
+    },
+    {
+      "name": "surface/selected",
+      "type": "COLOR",
+      "description": "Selected state background. References: foundation.blue.50",
+      "valuesByMode": {
+        "1": "#E8F2FA"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "surface-selected"
+    },
+    {
+      "name": "surface/disabled",
+      "type": "COLOR",
+      "description": "Disabled surface background. References: foundation.neutral.100",
+      "valuesByMode": {
+        "1": "#F8FAFB"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "surface-disabled"
+    },
+    {
+      "name": "border/default",
+      "type": "COLOR",
+      "description": "Default borders. References: foundation.neutral.200",
+      "valuesByMode": {
+        "1": "#E8EDF2"
+      },
+      "scopes": ["STROKE_COLOR"],
+      "codeSyntax": "border-default"
+    },
+    {
+      "name": "border/strong",
+      "type": "COLOR",
+      "description": "Emphasized borders. References: foundation.neutral.300",
+      "valuesByMode": {
+        "1": "#A8B5C2"
+      },
+      "scopes": ["STROKE_COLOR"],
+      "codeSyntax": "border-strong"
+    },
+    {
+      "name": "border/subtle",
+      "type": "COLOR",
+      "description": "De-emphasized borders. References: foundation.neutral.100",
+      "valuesByMode": {
+        "1": "#F8FAFB"
+      },
+      "scopes": ["STROKE_COLOR"],
+      "codeSyntax": "border-subtle"
+    },
+    {
+      "name": "border/brand",
+      "type": "COLOR",
+      "description": "Brand-colored borders. References: foundation.blue.500",
+      "valuesByMode": {
+        "1": "#2B79B9"
+      },
+      "scopes": ["STROKE_COLOR"],
+      "codeSyntax": "border-brand"
+    },
+    {
+      "name": "border/disabled",
+      "type": "COLOR",
+      "description": "Disabled borders. References: foundation.neutral.200",
+      "valuesByMode": {
+        "1": "#E8EDF2"
+      },
+      "scopes": ["STROKE_COLOR"],
+      "codeSyntax": "border-disabled"
+    },
+    {
+      "name": "border/focus",
+      "type": "COLOR",
+      "description": "Focus state borders. References: foundation.blue.500",
+      "valuesByMode": {
+        "1": "#2B79B9"
+      },
+      "scopes": ["STROKE_COLOR"],
+      "codeSyntax": "border-focus"
+    },
+    {
+      "name": "border/error",
+      "type": "COLOR",
+      "description": "Error state borders. References: foundation.red.500",
+      "valuesByMode": {
+        "1": "#E74C3C"
+      },
+      "scopes": ["STROKE_COLOR"],
+      "codeSyntax": "border-error"
+    },
+    {
+      "name": "action/primary",
+      "type": "COLOR",
+      "description": "Primary button default. References: foundation.blue.500",
+      "valuesByMode": {
+        "1": "#2B79B9"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "action-primary"
+    },
+    {
+      "name": "action/primaryHover",
+      "type": "COLOR",
+      "description": "Primary button hover. References: foundation.blue.600",
+      "valuesByMode": {
+        "1": "#1F5A8E"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "action-primary-hover"
+    },
+    {
+      "name": "action/primaryActive",
+      "type": "COLOR",
+      "description": "Primary button active. References: foundation.blue.700",
+      "valuesByMode": {
+        "1": "#153F63"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "action-primary-active"
+    },
+    {
+      "name": "action/primaryDisabled",
+      "type": "COLOR",
+      "description": "Primary button disabled. References: foundation.neutral.300",
+      "valuesByMode": {
+        "1": "#A8B5C2"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "action-primary-disabled"
+    },
+    {
+      "name": "action/primarySubtle",
+      "type": "COLOR",
+      "description": "Subtle primary background. References: foundation.blue.50",
+      "valuesByMode": {
+        "1": "#E8F2FA"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "action-primary-subtle"
+    },
+    {
+      "name": "action/primarySubtleHover",
+      "type": "COLOR",
+      "description": "Subtle primary hover. References: foundation.blue.100",
+      "valuesByMode": {
+        "1": "#C1DCEF"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "action-primary-subtle-hover"
+    },
+    {
+      "name": "action/secondary",
+      "type": "COLOR",
+      "description": "Secondary button default. References: foundation.neutral.600",
+      "valuesByMode": {
+        "1": "#2D4A5F"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "action-secondary"
+    },
+    {
+      "name": "action/secondaryHover",
+      "type": "COLOR",
+      "description": "Secondary button hover. References: foundation.neutral.700",
+      "valuesByMode": {
+        "1": "#1A2B3D"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "action-secondary-hover"
+    },
+    {
+      "name": "action/secondaryActive",
+      "type": "COLOR",
+      "description": "Secondary button active. References: foundation.neutral.800",
+      "valuesByMode": {
+        "1": "#121A24"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "action-secondary-active"
+    },
+    {
+      "name": "action/tertiaryHover",
+      "type": "COLOR",
+      "description": "Ghost button hover. References: foundation.neutral.100",
+      "valuesByMode": {
+        "1": "#F8FAFB"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "action-tertiary-hover"
+    },
+    {
+      "name": "action/tertiaryActive",
+      "type": "COLOR",
+      "description": "Ghost button active. References: foundation.neutral.200",
+      "valuesByMode": {
+        "1": "#E8EDF2"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "action-tertiary-active"
+    },
+    {
+      "name": "feedback/success",
+      "type": "COLOR",
+      "description": "Success indicator. References: foundation.green.500",
+      "valuesByMode": {
+        "1": "#27AE60"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "feedback-success"
+    },
+    {
+      "name": "feedback/successSubtle",
+      "type": "COLOR",
+      "description": "Success background. References: foundation.green.50",
+      "valuesByMode": {
+        "1": "#E8F8F5"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "feedback-success-subtle"
+    },
+    {
+      "name": "feedback/successBorder",
+      "type": "COLOR",
+      "description": "Success border. References: foundation.green.500",
+      "valuesByMode": {
+        "1": "#27AE60"
+      },
+      "scopes": ["STROKE_COLOR"],
+      "codeSyntax": "feedback-success-border"
+    },
+    {
+      "name": "feedback/successText",
+      "type": "COLOR",
+      "description": "Success text. References: foundation.green.700",
+      "valuesByMode": {
+        "1": "#155A32"
+      },
+      "scopes": ["TEXT_FILL"],
+      "codeSyntax": "feedback-success-text"
+    },
+    {
+      "name": "feedback/warning",
+      "type": "COLOR",
+      "description": "Warning indicator. References: foundation.orange.500",
+      "valuesByMode": {
+        "1": "#E67E22"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "feedback-warning"
+    },
+    {
+      "name": "feedback/warningSubtle",
+      "type": "COLOR",
+      "description": "Warning background. References: foundation.orange.50",
+      "valuesByMode": {
+        "1": "#FFF4E6"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "feedback-warning-subtle"
+    },
+    {
+      "name": "feedback/warningBorder",
+      "type": "COLOR",
+      "description": "Warning border. References: foundation.orange.500",
+      "valuesByMode": {
+        "1": "#E67E22"
+      },
+      "scopes": ["STROKE_COLOR"],
+      "codeSyntax": "feedback-warning-border"
+    },
+    {
+      "name": "feedback/warningText",
+      "type": "COLOR",
+      "description": "Warning text. References: foundation.orange.800",
+      "valuesByMode": {
+        "1": "#993608"
+      },
+      "scopes": ["TEXT_FILL"],
+      "codeSyntax": "feedback-warning-text"
+    },
+    {
+      "name": "feedback/error",
+      "type": "COLOR",
+      "description": "Error indicator. References: foundation.red.500",
+      "valuesByMode": {
+        "1": "#E74C3C"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "feedback-error"
+    },
+    {
+      "name": "feedback/errorSubtle",
+      "type": "COLOR",
+      "description": "Error background. References: foundation.red.50",
+      "valuesByMode": {
+        "1": "#FFEBEE"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "feedback-error-subtle"
+    },
+    {
+      "name": "feedback/errorBorder",
+      "type": "COLOR",
+      "description": "Error border. References: foundation.red.500",
+      "valuesByMode": {
+        "1": "#E74C3C"
+      },
+      "scopes": ["STROKE_COLOR"],
+      "codeSyntax": "feedback-error-border"
+    },
+    {
+      "name": "feedback/errorText",
+      "type": "COLOR",
+      "description": "Error text. References: foundation.red.700",
+      "valuesByMode": {
+        "1": "#C62828"
+      },
+      "scopes": ["TEXT_FILL"],
+      "codeSyntax": "feedback-error-text"
+    },
+    {
+      "name": "feedback/info",
+      "type": "COLOR",
+      "description": "Info indicator. References: foundation.lightBlue.500",
+      "valuesByMode": {
+        "1": "#2980B9"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "feedback-info"
+    },
+    {
+      "name": "feedback/infoSubtle",
+      "type": "COLOR",
+      "description": "Info background. References: foundation.lightBlue.50",
+      "valuesByMode": {
+        "1": "#E3F2FD"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "feedback-info-subtle"
+    },
+    {
+      "name": "feedback/infoBorder",
+      "type": "COLOR",
+      "description": "Info border. References: foundation.lightBlue.500",
+      "valuesByMode": {
+        "1": "#2980B9"
+      },
+      "scopes": ["STROKE_COLOR"],
+      "codeSyntax": "feedback-info-border"
+    },
+    {
+      "name": "feedback/infoText",
+      "type": "COLOR",
+      "description": "Info text. References: foundation.lightBlue.700",
+      "valuesByMode": {
+        "1": "#1976D2"
+      },
+      "scopes": ["TEXT_FILL"],
+      "codeSyntax": "feedback-info-text"
+    },
+    {
+      "name": "accent/gold",
+      "type": "COLOR",
+      "description": "Celebration gold. References: foundation.gold.500",
+      "valuesByMode": {
+        "1": "#F4B942"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "accent-gold"
+    },
+    {
+      "name": "accent/goldSubtle",
+      "type": "COLOR",
+      "description": "Gold background. References: foundation.gold.50",
+      "valuesByMode": {
+        "1": "#FFF9E6"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "accent-gold-subtle"
+    },
+    {
+      "name": "accent/peach",
+      "type": "COLOR",
+      "description": "Warm peach. References: foundation.peach.500",
+      "valuesByMode": {
+        "1": "#FFB088"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "accent-peach"
+    },
+    {
+      "name": "accent/peachSubtle",
+      "type": "COLOR",
+      "description": "Peach background. References: foundation.peach.50",
+      "valuesByMode": {
+        "1": "#FFF3ED"
+      },
+      "scopes": ["FRAME_FILL", "SHAPE_FILL"],
+      "codeSyntax": "accent-peach-subtle"
+    }
+  ]
+}

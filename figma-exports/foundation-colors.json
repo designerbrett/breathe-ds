@@ -1,0 +1,810 @@
+{
+  "name": "Foundation",
+  "modes": [
+    {
+      "name": "Default",
+      "modeId": "1"
+    }
+  ],
+  "variables": [
+    {
+      "name": "blue/50",
+      "type": "COLOR",
+      "description": "Lightest blue",
+      "valuesByMode": {
+        "1": "#E8F2FA"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "blue-50"
+    },
+    {
+      "name": "blue/100",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#C1DCEF"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "blue-100"
+    },
+    {
+      "name": "blue/200",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#9AC6E5"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "blue-200"
+    },
+    {
+      "name": "blue/300",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#73B0DA"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "blue-300"
+    },
+    {
+      "name": "blue/400",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#4C9AD0"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "blue-400"
+    },
+    {
+      "name": "blue/500",
+      "type": "COLOR",
+      "description": "Base Kivo Blue - Primary brand color",
+      "valuesByMode": {
+        "1": "#2B79B9"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "blue-500"
+    },
+    {
+      "name": "blue/600",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#1F5A8E"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "blue-600"
+    },
+    {
+      "name": "blue/700",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#153F63"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "blue-700"
+    },
+    {
+      "name": "blue/800",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#0C2A42"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "blue-800"
+    },
+    {
+      "name": "blue/900",
+      "type": "COLOR",
+      "description": "Darkest blue",
+      "valuesByMode": {
+        "1": "#051421"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "blue-900"
+    },
+    {
+      "name": "neutral/0",
+      "type": "COLOR",
+      "description": "Pure white",
+      "valuesByMode": {
+        "1": "#FFFFFF"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "neutral-0"
+    },
+    {
+      "name": "neutral/50",
+      "type": "COLOR",
+      "description": "Page background",
+      "valuesByMode": {
+        "1": "#FAFBFC"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "neutral-50"
+    },
+    {
+      "name": "neutral/100",
+      "type": "COLOR",
+      "description": "Soft backgrounds",
+      "valuesByMode": {
+        "1": "#F8FAFB"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "neutral-100"
+    },
+    {
+      "name": "neutral/200",
+      "type": "COLOR",
+      "description": "Borders, dividers",
+      "valuesByMode": {
+        "1": "#E8EDF2"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "neutral-200"
+    },
+    {
+      "name": "neutral/300",
+      "type": "COLOR",
+      "description": "Placeholder text",
+      "valuesByMode": {
+        "1": "#A8B5C2"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "neutral-300"
+    },
+    {
+      "name": "neutral/400",
+      "type": "COLOR",
+      "description": "Tertiary text",
+      "valuesByMode": {
+        "1": "#7B8A99"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "neutral-400"
+    },
+    {
+      "name": "neutral/500",
+      "type": "COLOR",
+      "description": "Body text",
+      "valuesByMode": {
+        "1": "#5A6C7D"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "neutral-500"
+    },
+    {
+      "name": "neutral/600",
+      "type": "COLOR",
+      "description": "Secondary text",
+      "valuesByMode": {
+        "1": "#2D4A5F"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "neutral-600"
+    },
+    {
+      "name": "neutral/700",
+      "type": "COLOR",
+      "description": "Primary text, headers",
+      "valuesByMode": {
+        "1": "#1A2B3D"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "neutral-700"
+    },
+    {
+      "name": "neutral/800",
+      "type": "COLOR",
+      "description": "Darkest text",
+      "valuesByMode": {
+        "1": "#121A24"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "neutral-800"
+    },
+    {
+      "name": "green/50",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#E8F8F5"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "green-50"
+    },
+    {
+      "name": "green/100",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#C1E8DC"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "green-100"
+    },
+    {
+      "name": "green/200",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#9AD8C3"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "green-200"
+    },
+    {
+      "name": "green/300",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#73C8AA"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "green-300"
+    },
+    {
+      "name": "green/400",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#4CB891"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "green-400"
+    },
+    {
+      "name": "green/500",
+      "type": "COLOR",
+      "description": "Base success green",
+      "valuesByMode": {
+        "1": "#27AE60"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "green-500"
+    },
+    {
+      "name": "green/600",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#1E8449"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "green-600"
+    },
+    {
+      "name": "green/700",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#155A32"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "green-700"
+    },
+    {
+      "name": "green/800",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#0C301B"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "green-800"
+    },
+    {
+      "name": "green/900",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#051810"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "green-900"
+    },
+    {
+      "name": "orange/50",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFF4E6"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "orange-50"
+    },
+    {
+      "name": "orange/100",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFE5CC"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "orange-100"
+    },
+    {
+      "name": "orange/200",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFD6B3"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "orange-200"
+    },
+    {
+      "name": "orange/300",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFC799"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "orange-300"
+    },
+    {
+      "name": "orange/400",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFB880"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "orange-400"
+    },
+    {
+      "name": "orange/500",
+      "type": "COLOR",
+      "description": "Base warning orange",
+      "valuesByMode": {
+        "1": "#E67E22"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "orange-500"
+    },
+    {
+      "name": "orange/600",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#CC6619"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "orange-600"
+    },
+    {
+      "name": "orange/700",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#B34E11"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "orange-700"
+    },
+    {
+      "name": "orange/800",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#993608"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "orange-800"
+    },
+    {
+      "name": "orange/900",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#661E00"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "orange-900"
+    },
+    {
+      "name": "red/50",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFEBEE"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "red-50"
+    },
+    {
+      "name": "red/100",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFCDD2"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "red-100"
+    },
+    {
+      "name": "red/200",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#EF9A9A"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "red-200"
+    },
+    {
+      "name": "red/300",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#E57373"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "red-300"
+    },
+    {
+      "name": "red/400",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#EF5350"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "red-400"
+    },
+    {
+      "name": "red/500",
+      "type": "COLOR",
+      "description": "Base error red",
+      "valuesByMode": {
+        "1": "#E74C3C"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "red-500"
+    },
+    {
+      "name": "red/600",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#D32F2F"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "red-600"
+    },
+    {
+      "name": "red/700",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#C62828"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "red-700"
+    },
+    {
+      "name": "red/800",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#B71C1C"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "red-800"
+    },
+    {
+      "name": "red/900",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#8B0000"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "red-900"
+    },
+    {
+      "name": "lightBlue/50",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#E3F2FD"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "lightBlue-50"
+    },
+    {
+      "name": "lightBlue/100",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#BBDEFB"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "lightBlue-100"
+    },
+    {
+      "name": "lightBlue/200",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#90CAF9"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "lightBlue-200"
+    },
+    {
+      "name": "lightBlue/300",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#64B5F6"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "lightBlue-300"
+    },
+    {
+      "name": "lightBlue/400",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#42A5F5"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "lightBlue-400"
+    },
+    {
+      "name": "lightBlue/500",
+      "type": "COLOR",
+      "description": "Base info blue",
+      "valuesByMode": {
+        "1": "#2980B9"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "lightBlue-500"
+    },
+    {
+      "name": "lightBlue/600",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#1E88E5"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "lightBlue-600"
+    },
+    {
+      "name": "lightBlue/700",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#1976D2"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "lightBlue-700"
+    },
+    {
+      "name": "lightBlue/800",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#1565C0"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "lightBlue-800"
+    },
+    {
+      "name": "lightBlue/900",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#0D47A1"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "lightBlue-900"
+    },
+    {
+      "name": "gold/50",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFF9E6"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "gold-50"
+    },
+    {
+      "name": "gold/100",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFF0CC"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "gold-100"
+    },
+    {
+      "name": "gold/200",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFE7B3"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "gold-200"
+    },
+    {
+      "name": "gold/300",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFDE99"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "gold-300"
+    },
+    {
+      "name": "gold/400",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFD580"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "gold-400"
+    },
+    {
+      "name": "gold/500",
+      "type": "COLOR",
+      "description": "Base celebration gold",
+      "valuesByMode": {
+        "1": "#F4B942"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "gold-500"
+    },
+    {
+      "name": "gold/600",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#F39C12"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "gold-600"
+    },
+    {
+      "name": "gold/700",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#E67E22"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "gold-700"
+    },
+    {
+      "name": "gold/800",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#D35400"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "gold-800"
+    },
+    {
+      "name": "gold/900",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#BA4A00"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "gold-900"
+    },
+    {
+      "name": "peach/50",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFF3ED"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "peach-50"
+    },
+    {
+      "name": "peach/100",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFE5D6"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "peach-100"
+    },
+    {
+      "name": "peach/200",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFD8BF"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "peach-200"
+    },
+    {
+      "name": "peach/300",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFCAA8"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "peach-300"
+    },
+    {
+      "name": "peach/400",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FFBC91"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "peach-400"
+    },
+    {
+      "name": "peach/500",
+      "type": "COLOR",
+      "description": "Base warm peach",
+      "valuesByMode": {
+        "1": "#FFB088"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "peach-500"
+    },
+    {
+      "name": "peach/600",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FF9A6C"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "peach-600"
+    },
+    {
+      "name": "peach/700",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FF8450"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "peach-700"
+    },
+    {
+      "name": "peach/800",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#FF6E34"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "peach-800"
+    },
+    {
+      "name": "peach/900",
+      "type": "COLOR",
+      "valuesByMode": {
+        "1": "#E65100"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "peach-900"
+    },
+    {
+      "name": "purple/500",
+      "type": "COLOR",
+      "description": "Data visualization - purple",
+      "valuesByMode": {
+        "1": "#9B59B6"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "purple-500"
+    },
+    {
+      "name": "teal/500",
+      "type": "COLOR",
+      "description": "Data visualization - teal",
+      "valuesByMode": {
+        "1": "#16A085"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "teal-500"
+    },
+    {
+      "name": "yellow/500",
+      "type": "COLOR",
+      "description": "Data visualization - yellow",
+      "valuesByMode": {
+        "1": "#F39C12"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "yellow-500"
+    },
+    {
+      "name": "pink/500",
+      "type": "COLOR",
+      "description": "Data visualization - pink",
+      "valuesByMode": {
+        "1": "#E91E63"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "pink-500"
+    },
+    {
+      "name": "cyan/500",
+      "type": "COLOR",
+      "description": "Data visualization - cyan",
+      "valuesByMode": {
+        "1": "#3498DB"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "cyan-500"
+    },
+    {
+      "name": "lime/500",
+      "type": "COLOR",
+      "description": "Data visualization - lime",
+      "valuesByMode": {
+        "1": "#2ECC71"
+      },
+      "scopes": ["ALL_SCOPES"],
+      "codeSyntax": "lime-500"
+    }
+  ]
+}

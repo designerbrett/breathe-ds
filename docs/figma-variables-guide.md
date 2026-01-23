@@ -1,27 +1,79 @@
 # Figma Variables Setup Guide - Breathe Design System
 
 ## Overview
-This guide walks through setting up the Breathe Design System color tokens as Figma variables, following the two-tier token structure (primitives → semantic).
+This comprehensive guide walks through setting up all Breathe Design System tokens as Figma variables, including colors, typography, spacing, borders, height, shadows, and more.
+
+## Quick Start: Import from JSON
+
+**Fastest method for colors:** Import pre-generated JSON files using the [Export/Import Variables plugin](https://www.figma.com/community/plugin/1256972111705530093).
+
+The JSON files are located in `figma-exports/`:
+- `foundation-colors.json` - All foundation color scales
+- `semantic-tokens.json` - All semantic color tokens
+
+See [figma-exports/README.md](../figma-exports/README.md) for detailed import instructions.
+
+**Note:** Other token types (spacing, typography, etc.) need to be set up manually as Figma variables support different types.
+
+---
+
+## Figma Variable Types
+
+Figma supports 4 variable types:
+- **Color** - For colors (hex, RGB, RGBA)
+- **Number** - For dimensions, spacing, opacity, etc.
+- **String** - For font names, text values
+- **Boolean** - For true/false states
+
+Our tokens map to these types:
+- Colors → Color variables
+- Spacing, Height, Border Width, Border Radius → Number variables
+- Shadows → String variables (CSS box-shadow values)
+- Typography (font-family) → String variables
+- Typography (font-size, line-height, font-weight) → Number variables
+- Animation (duration) → Number variables
+- Opacity → Number variables
+
+---
+
+## 📖 Complete Token Setup Guide
+
+**This guide covers color variables in detail.**
+
+For comprehensive setup of ALL token types (typography, spacing, borders, height, shadows, opacity, animation), see:
+
+👉 **[Complete Figma Variables Setup - All Tokens](./figma-all-tokens-guide.md)**
+
+That guide includes:
+- Typography (font families, sizes, weights, line heights)
+- Spacing (8px and 4px grids with modes)
+- Border Width & Radius (with External/Internal modes)
+- Height (component heights, touch targets)
+- Shadows (effect styles for elevation)
+- Opacity (transparency values)
+- Animation (duration and easing)
+
+---
 
 ## Why Use Figma Variables?
 
 Variables in Figma allow you to:
-- Create a single source of truth for colors
-- Reference primitive colors in semantic tokens (aliasing)
-- Easily rebrand by changing primitive values
-- Support multiple themes (External vs Internal)
-- Sync design tokens with code
+- Create a single source of truth for design tokens
+- Reference foundation values in semantic tokens (aliasing)
+- Easily rebrand by changing foundation values
+- Support multiple themes/modes (External vs Internal)
+- Sync design tokens between Figma and code
 - Maintain consistency across files
 
-## Two-Tier Variable Structure
+## Two-Tier Variable Structure (Colors)
 
-### Tier 1: Primitive Variables (Foundation)
+### Tier 1: Foundation Variables
 Raw color values - the "raw ingredients"
 
-### Tier 2: Semantic Variables (Usage)
-Reference primitives and describe purpose - the "recipes"
+### Tier 2: Semantic Variables
+Reference foundation colors and describe purpose - the "recipes"
 
-## Step-by-Step Setup
+## Color Setup - Step-by-Step
 
 ### Step 1: Create Variable Collections
 
